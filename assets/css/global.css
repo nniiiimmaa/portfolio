@@ -1,0 +1,263 @@
+/* ── DESIGN TOKENS ── */
+:root {
+  --bg: #0a0a0f;
+  --bg2: #12121a;
+  --bg3: #1a1a26;
+  --card: #16161f;
+  --border: rgba(255, 255, 255, 0.07);
+  --border2: rgba(255, 255, 255, 0.13);
+  --text: #f0eff8;
+  --muted: #8888a8;
+  --subtle: #4a4a6a;
+  --accent: #7c6ff5;
+  --accent2: #b8b0ff;
+  --accent3: #5eeaaa;
+  --accent4: #f5a97f;
+  --tag-bg: rgba(124, 111, 245, 0.13);
+  --tag-text: #b8b0ff;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --glow: rgba(124, 111, 245, 0.18);
+}
+
+[data-theme="light"] {
+  --bg: #f5f4fc;
+  --bg2: #ffffff;
+  --bg3: #eceaf8;
+  --card: #ffffff;
+  --border: rgba(80, 70, 180, 0.1);
+  --border2: rgba(80, 70, 180, 0.2);
+  --text: #1a1830;
+  --muted: #6b6890;
+  --subtle: #b0aed0;
+  --accent: #5848d9;
+  --accent2: #5848d9;
+  --accent3: #0d9e68;
+  --accent4: #c4520a;
+  --tag-bg: rgba(88, 72, 217, 0.09);
+  --tag-text: #5848d9;
+  --glow: rgba(88, 72, 217, 0.1);
+}
+
+/* ── RESET ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  min-height: 100vh;
+  transition:
+    background 0.35s,
+    color 0.35s;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--subtle);
+  border-radius: 3px;
+}
+
+/* ── LAYOUT ── */
+main {
+  padding-top: 60px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+/* ── SHARED SECTION CHROME ── */
+section {
+  padding: 72px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-label {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  color: var(--accent3);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.section-title {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* ── SHARED CARD ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.8rem;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+}
+
+.card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px 0 0 3px;
+}
+
+.card-accent.green {
+  background: var(--accent3);
+}
+
+.card-accent.orange {
+  background: var(--accent4);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.card-sub {
+  font-size: 0.85rem;
+  color: var(--accent2);
+  font-weight: 400;
+  font-family: "DM Mono", monospace;
+  margin-bottom: 0.5rem;
+}
+
+.card-date {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  margin-bottom: 0.75rem;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ── SHARED TAGS ── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.9rem;
+}
+
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-family: "DM Mono", monospace;
+  border: 1px solid var(--border);
+}
+
+/* ── SHARED BUTTONS ── */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 40px;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border2);
+  color: var(--text);
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  background: var(--tag-bg);
+}
+
+/* ── SHARED GRIDS ── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* ── PRINT ── */
+@media print {
+  body {
+    display: none !important;
+  }
+}
+
+/* ── RTL GLOBALS ── */
+[dir="rtl"] .card-accent {
+  left: auto;
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}

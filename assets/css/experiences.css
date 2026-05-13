@@ -1,0 +1,43 @@
+/* ── TIMELINE ── */
+.exp-item {
+  display: flex;
+  gap: 1.6rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-item:last-child {
+  border-bottom: none;
+}
+
+.exp-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px var(--tag-bg);
+}
+
+.exp-line {
+  width: 1px;
+  flex: 1;
+  background: var(--border);
+  margin-top: 8px;
+}
+
+.exp-content {
+  flex: 1;
+}
+
+/* ── EXPERIENCE RTL ── */
+[dir="rtl"] .exp-item {
+  flex-direction: row-reverse;
+}

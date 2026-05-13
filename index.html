@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nima Portfolio</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/nav.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/experiences.css" />
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+    <link rel="stylesheet" href="./assets/css/education.css" />
+    <link rel="stylesheet" href="./assets/css/skills.css" />
+    <link rel="stylesheet" href="./assets/css/hobbies.css" />
+    <link rel="stylesheet" href="./assets/css/media.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/cv.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-logo" id="nav-logo">portfolio.dev</div>
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#education" data-i18n="nav_edu">Education</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#hobbies" data-i18n="nav_hobbies">Hobbies</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <select class="lang-select" id="lang-picker" title="Language">
+          <option value="en">EN</option>
+          <option value="fa">فا</option>
+          <option value="pt">PT</option>
+          <option value="tr">TR</option>
+          <option value="ar">AR</option>
+          <option value="de">DE</option>
+          <option value="es">ES</option>
+        </select>
+        <button class="ctrl-btn" id="theme-btn" title="Toggle theme">◐</button>
+      </div>
+      <button
+        class="hamburger"
+        id="hamburger-btn"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ── MOBILE DRAWER ── -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="mobile-drawer-backdrop" id="drawer-backdrop"></div>
+      <div class="mobile-drawer-panel">
+        <div class="drawer-controls">
+          <select
+            class="lang-select"
+            id="lang-picker-mobile"
+            title="Language"
+            style="flex: 1"
+          >
+            <option value="en">English</option>
+            <option value="fa">فارسی</option>
+            <option value="pt">Português</option>
+            <option value="tr">Türkçe</option>
+            <option value="ar">العربية</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+          </select>
+          <button class="ctrl-btn" id="theme-btn-mobile" title="Toggle theme">
+            ◐
+          </button>
+        </div>
+        <div class="drawer-divider"></div>
+        <a href="#about" data-i18n="nav_about" class="drawer-link">About</a>
+        <a href="#experience" data-i18n="nav_exp" class="drawer-link"
+          >Experience</a
+        >
+        <a href="#projects" data-i18n="nav_projects" class="drawer-link"
+          >Projects</a
+        >
+        <a href="#education" data-i18n="nav_edu" class="drawer-link"
+          >Education</a
+        >
+        <a href="#skills" data-i18n="nav_skills" class="drawer-link">Skills</a>
+        <a href="#hobbies" data-i18n="nav_hobbies" class="drawer-link"
+          >Hobbies</a
+        >
+        <a href="#contact" data-i18n="nav_contact" class="drawer-link"
+          >Contact</a
+        >
+      </div>
+    </div>
+
+    <main>
+      <!-- ── HERO ── -->
+      <section class="hero" id="about">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="hero-eyebrow" data-i18n="hero_eyebrow">
+              Available for work
+            </div>
+            <h1 id="hero-name"><em>Nima</em></h1>
+            <p class="hero-role">
+              <span data-i18n="hero_role"
+                >Front-End Developer & Open Source Enthusiast</span
+              >
+            </p>
+            <p class="hero-bio" data-i18n="hero_bio">
+              I build thoughtful digital experiences at the intersection of
+              design and engineering. Passionate about clean architecture,
+              developer tools, and the open web.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary" data-i18n="hero_cta1"
+                >Get in touch</a
+              >
+              <a href="#cv" class="btn-outline" data-i18n="hero_cta2"
+                >Download CV</a
+              >
+              <span
+                style="
+                  display: flex;
+                  align-items: center;
+                  font-size: 13px;
+                  color: var(--accent3);
+                "
+                ><span class="availability-dot"></span
+                ><span data-i18n="hero_avail">Open to opportunities</span></span
+              >
+            </div>
+          </div>
+          <div class="hero-photo" id="hero-photo-box">
+            <img
+              id="hero-photo-img"
+              src=""
+              alt="Profile photo"
+              style="
+                display: none;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center top;
+              "
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ── STATS ── -->
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-val">7+</div>
+          <div class="stat-label" data-i18n="stat_years">Years experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">40+</div>
+          <div class="stat-label" data-i18n="stat_projects">
+            Projects shipped
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">12k</div>
+          <div class="stat-label" data-i18n="stat_stars">GitHub stars</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">3</div>
+          <div class="stat-label" data-i18n="stat_certs">Certifications</div>
+        </div>
+      </div>
+
+      <!-- ── EXPERIENCE ── -->
+      <section id="experience">
+        <div class="section-label" data-i18n="exp_label">Work History</div>
+        <h2 class="section-title" data-i18n="exp_title">Experience</h2>
+
+        <div class="exp-item">
+          <div class="exp-dot-col">
+            <div class="exp-dot"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-content">
+            <div class="card-title" data-i18n="exp1_role">
+              Senior Full-Stack Engineer
+            </div>
+            <div class="card-sub">Vercel — San Francisco, CA</div>
+            <div class="card-date">Jan 2022 — Present</div>
+            <div class="card-desc" data-i18n="exp1_desc">
+              Led development of core Next.js deployment infrastructure serving
+              300k+ active projects. Reduced build times by 40% through
+              parallelization strategies. Mentored a team of 5 junior engineers.
+            </div>
+            <div class="tags">
+              <span class="tag">Next.js</span><span class="tag">TypeScript</span
+              ><span class="tag">Rust</span><span class="tag">Kubernetes</span
+              ><span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot-col">
+            <div class="exp-dot" style="background: var(--accent3)"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-content">
+            <div class="card-title" data-i18n="exp2_role">
+              Software Engineer
+            </div>
+            <div class="card-sub">Stripe — Remote</div>
+            <div class="card-date">Mar 2019 — Dec 2021</div>
+            <div class="card-desc" data-i18n="exp2_desc">
+              Built and maintained the merchant dashboard and payment analytics
+              pipeline. Designed real-time fraud detection UI. Contributed to
+              the public Stripe.js SDK.
+            </div>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">Go</span
+              ><span class="tag">gRPC</span><span class="tag">Redis</span
+              ><span class="tag">GraphQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-dot-col">
+            <div class="exp-dot" style="background: var(--accent4)"></div>
+          </div>
+          <div class="exp-content">
+            <div class="card-title" data-i18n="exp3_role">
+              Frontend Developer
+            </div>
+            <div class="card-sub">Shopify — Ottawa, ON</div>
+            <div class="card-date">Jun 2017 — Feb 2019</div>
+            <div class="card-desc" data-i18n="exp3_desc">
+              Developed merchant-facing storefronts and internal design system
+              components. Improved Lighthouse score from 58 to 94 across
+              flagship store themes.
+            </div>
+            <div class="tags">
+              <span class="tag">Vue.js</span
+              ><span class="tag">Ruby on Rails</span
+              ><span class="tag">SCSS</span><span class="tag">Liquid</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROJECTS ── -->
+      <section id="projects">
+        <div class="section-label" data-i18n="proj_label">Selected Work</div>
+        <h2 class="section-title" data-i18n="proj_title">Projects</h2>
+        <div class="grid-2">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">⚡</div>
+              <div class="project-links">
+                <a href="#" class="proj-link">GitHub</a>
+                <a href="#" class="proj-link">Live</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">DevFlux CLI</div>
+              <div class="project-desc" data-i18n="proj1_desc">
+                A blazing-fast developer workflow tool written in Rust. Manages
+                environment configs, secrets, and deployment pipelines across
+                cloud providers. 3.2k stars.
+              </div>
+              <div class="tags">
+                <span class="tag">Rust</span><span class="tag">CLI</span
+                ><span class="tag">DevOps</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">🧠</div>
+              <div class="project-links">
+                <a href="#" class="proj-link">GitHub</a>
+                <a href="#" class="proj-link">Live</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Mindmap AI</div>
+              <div class="project-desc" data-i18n="proj2_desc">
+                Real-time collaborative knowledge graph built with WebSockets
+                and Canvas API. Integrates with LLMs to suggest connections.
+                Used by 8k+ teams.
+              </div>
+              <div class="tags">
+                <span class="tag">TypeScript</span><span class="tag">WebGL</span
+                ><span class="tag">OpenAI API</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">🔐</div>
+              <div class="project-links">
+                <a href="#" class="proj-link">GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">VaultKit</div>
+              <div class="project-desc" data-i18n="proj3_desc">
+                Open-source secrets manager with zero-knowledge architecture.
+                Self-hostable alternative to HashiCorp Vault with a beautiful
+                web UI.
+              </div>
+              <div class="tags">
+                <span class="tag">Go</span><span class="tag">AES-256</span
+                ><span class="tag">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">📊</div>
+              <div class="project-links">
+                <a href="#" class="proj-link">GitHub</a>
+                <a href="#" class="proj-link">Live</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Prism Analytics</div>
+              <div class="project-desc" data-i18n="proj4_desc">
+                Lightweight, privacy-first analytics platform. No cookies, GDPR
+                compliant. Drop-in script under 2KB. Processes 50M events/day on
+                commodity hardware.
+              </div>
+              <div class="tags">
+                <span class="tag">ClickHouse</span
+                ><span class="tag">Svelte</span><span class="tag">Privacy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── EDUCATION ── -->
+      <section id="education">
+        <div class="section-label" data-i18n="edu_label">
+          Academic Background
+        </div>
+        <h2 class="section-title" data-i18n="edu_title">Education</h2>
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <div class="card-title" data-i18n="edu1_degree">
+                B.Sc. Computer Science
+              </div>
+              <div class="card-sub">University of Waterloo</div>
+              <div class="card-date">2013 — 2017 · GPA 3.9/4.0</div>
+              <div class="card-desc" data-i18n="edu1_desc">
+                Specialized in distributed systems and programming languages.
+                Dean's Honor List all four years.
+              </div>
+              <div>
+                <span class="cert-badge"
+                  >🏅 <span data-i18n="edu1_award">Dean's List</span></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon">📜</div>
+            <div>
+              <div class="card-title">AWS Certified Solutions Architect</div>
+              <div class="card-sub">Amazon Web Services</div>
+              <div class="card-date">2021</div>
+              <div>
+                <span class="cert-badge"
+                  >✓
+                  <span data-i18n="cert_active">Active credential</span></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon">📜</div>
+            <div>
+              <div class="card-title">Certified Kubernetes Administrator</div>
+              <div class="card-sub">CNCF</div>
+              <div class="card-date">2022</div>
+              <div>
+                <span class="cert-badge"
+                  >✓
+                  <span data-i18n="cert_active">Active credential</span></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SKILLS ── -->
+      <section id="skills">
+        <div class="section-label" data-i18n="skills_label">
+          Technical Expertise
+        </div>
+        <h2 class="section-title" data-i18n="skills_title">Skills</h2>
+
+        <div style="margin-bottom: 1.4rem">
+          <div
+            style="
+              font-size: 12px;
+              color: var(--muted);
+              margin-bottom: 10px;
+              font-family: &quot;DM Mono&quot;, monospace;
+            "
+            data-i18n="skills_frontend"
+          >
+            Frontend
+          </div>
+          <div class="skills-grid">
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>React / Next.js
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>TypeScript
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>Vue / Nuxt
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>Svelte
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>CSS / SCSS
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>WebGL
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.4rem">
+          <div
+            style="
+              font-size: 12px;
+              color: var(--muted);
+              margin-bottom: 10px;
+              font-family: &quot;DM Mono&quot;, monospace;
+            "
+            data-i18n="skills_backend"
+          >
+            Backend
+          </div>
+          <div class="skills-grid">
+            <div class="skill-pill"><span class="skill-dot"></span>Node.js</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Go</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Rust</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Python</div>
+            <div class="skill-pill">
+              <span class="skill-dot"></span>PostgreSQL
+            </div>
+            <div class="skill-pill"><span class="skill-dot"></span>Redis</div>
+          </div>
+        </div>
+
+        <div>
+          <div
+            style="
+              font-size: 12px;
+              color: var(--muted);
+              margin-bottom: 10px;
+              font-family: &quot;DM Mono&quot;, monospace;
+            "
+            data-i18n="skills_infra"
+          >
+            Infrastructure
+          </div>
+          <div class="skills-grid">
+            <div class="skill-pill">
+              <span class="skill-dot orange"></span>Docker
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot orange"></span>Kubernetes
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot orange"></span>AWS
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot orange"></span>Terraform
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot orange"></span>GitHub Actions
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot orange"></span>Prometheus
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── HOBBIES ── -->
+      <section id="hobbies">
+        <div class="section-label" data-i18n="hobbies_label">
+          Beyond the Terminal
+        </div>
+        <h2 class="section-title" data-i18n="hobbies_title">
+          Hobbies & Interests
+        </h2>
+        <div class="grid-3">
+          <div class="hobby-card">
+            <div class="hobby-emoji">📸</div>
+            <div class="hobby-name" data-i18n="hobby1_name">Photography</div>
+            <div class="hobby-desc" data-i18n="hobby1_desc">
+              Street & landscape photography across 30+ countries.
+            </div>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-emoji">🎵</div>
+            <div class="hobby-name" data-i18n="hobby2_name">
+              Music Production
+            </div>
+            <div class="hobby-desc" data-i18n="hobby2_desc">
+              Electronic ambient music. Released two EPs on Bandcamp.
+            </div>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-emoji">🧗</div>
+            <div class="hobby-name" data-i18n="hobby3_name">Rock Climbing</div>
+            <div class="hobby-desc" data-i18n="hobby3_desc">
+              Bouldering & sport climbing. V8 grade indoors.
+            </div>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-emoji">📚</div>
+            <div class="hobby-name" data-i18n="hobby4_name">Reading</div>
+            <div class="hobby-desc" data-i18n="hobby4_desc">
+              Sci-fi, philosophy of mind, and systems thinking.
+            </div>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-emoji">🌱</div>
+            <div class="hobby-name" data-i18n="hobby5_name">Open Source</div>
+            <div class="hobby-desc" data-i18n="hobby5_desc">
+              Regular contributor. OSS is a love language.
+            </div>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-emoji">✈️</div>
+            <div class="hobby-name" data-i18n="hobby6_name">Travel</div>
+            <div class="hobby-desc" data-i18n="hobby6_desc">
+              Slow travel, local food, off-the-beaten-path adventures.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SOCIAL ── -->
+      <section id="social">
+        <div class="section-label" data-i18n="social_label">Find Me Online</div>
+        <h2 class="section-title" data-i18n="social_title">Social Media</h2>
+        <div class="social-grid">
+          <a href="#" class="social-link">
+            <div class="social-icon">🐙</div>
+            <div>
+              <div class="social-name">GitHub</div>
+              <div class="social-handle">@alexrivera</div>
+            </div>
+          </a>
+          <a href="#" class="social-link">
+            <div class="social-icon">💼</div>
+            <div>
+              <div class="social-name">LinkedIn</div>
+              <div class="social-handle">alex-rivera-dev</div>
+            </div>
+          </a>
+          <a href="#" class="social-link">
+            <div class="social-icon">🐦</div>
+            <div>
+              <div class="social-name">Twitter / X</div>
+              <div class="social-handle">@alexrivera</div>
+            </div>
+          </a>
+          <a href="#" class="social-link">
+            <div class="social-icon">🟦</div>
+            <div>
+              <div class="social-name">Bluesky</div>
+              <div class="social-handle">@alexrivera.dev</div>
+            </div>
+          </a>
+          <a href="#" class="social-link">
+            <div class="social-icon">📝</div>
+            <div>
+              <div class="social-name">Dev.to</div>
+              <div class="social-handle">@alexrivera</div>
+            </div>
+          </a>
+          <a href="#" class="social-link">
+            <div class="social-icon">🎮</div>
+            <div>
+              <div class="social-name">Mastodon</div>
+              <div class="social-handle">@alex@hachyderm.io</div>
+            </div>
+          </a>
+          <a href="#" class="social-link">
+            <div class="social-icon">📸</div>
+            <div>
+              <div class="social-name">Instagram</div>
+              <div class="social-handle">@alexrivera.lens</div>
+            </div>
+          </a>
+          <a href="#" class="social-link">
+            <div class="social-icon">📺</div>
+            <div>
+              <div class="social-name">YouTube</div>
+              <div class="social-handle">Alex Rivera Dev</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ── -->
+      <section id="contact">
+        <div class="section-label" data-i18n="contact_label">Let's Talk</div>
+        <h2 class="section-title" data-i18n="contact_title">Get In Touch</h2>
+        <div class="contact-grid">
+          <div>
+            <p
+              style="
+                color: var(--muted);
+                font-size: 0.95rem;
+                line-height: 1.8;
+                margin-bottom: 1.4rem;
+              "
+              data-i18n="contact_intro"
+            >
+              Whether you have a project in mind, want to collaborate on open
+              source, or just want to say hi — my inbox is always open.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  font-size: 14px;
+                  color: var(--muted);
+                "
+              >
+                <span style="font-size: 16px">✉️</span>
+                <a
+                  href="mailto:alex@example.dev"
+                  style="color: var(--accent2); text-decoration: none"
+                  >alex@example.dev</a
+                >
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  font-size: 14px;
+                  color: var(--muted);
+                "
+              >
+                <span style="font-size: 16px">📍</span>
+                <span>San Francisco, CA (remote-friendly)</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  font-size: 14px;
+                  color: var(--muted);
+                "
+              >
+                <span style="font-size: 16px">⏰</span>
+                <span>Response within 24–48h</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact_name">Name</label>
+              <input type="text" class="form-input" placeholder="Jane Smith" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact_email">Email</label>
+              <input
+                type="email"
+                class="form-input"
+                placeholder="jane@example.com"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact_message"
+                >Message</label
+              >
+              <textarea
+                class="form-textarea"
+                placeholder="Tell me about your project..."
+              ></textarea>
+            </div>
+            <button
+              class="btn-primary"
+              style="align-self: flex-start"
+              data-i18n="contact_send"
+            >
+              Send message
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CV / PDF ── -->
+      <section id="cv">
+        <div class="section-label" data-i18n="cv_label">Export</div>
+        <h2 class="section-title" data-i18n="cv_title">Generate CV & Print</h2>
+        <div class="cv-section">
+          <p
+            style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem"
+            data-i18n="cv_intro"
+          >
+            Select which sections to include in your CV, then print or save as
+            PDF.
+          </p>
+          <div class="cv-options" id="cv-options">
+            <label class="cv-option"
+              ><input type="checkbox" checked data-section="experience" />
+              <span data-i18n="nav_exp">Experience</span></label
+            >
+            <label class="cv-option"
+              ><input type="checkbox" checked data-section="education" />
+              <span data-i18n="nav_edu">Education</span></label
+            >
+            <label class="cv-option"
+              ><input type="checkbox" checked data-section="projects" />
+              <span data-i18n="nav_projects">Projects</span></label
+            >
+            <label class="cv-option"
+              ><input type="checkbox" checked data-section="skills" />
+              <span data-i18n="nav_skills">Skills</span></label
+            >
+            <label class="cv-option"
+              ><input type="checkbox" data-section="hobbies" />
+              <span data-i18n="nav_hobbies">Hobbies</span></label
+            >
+            <label class="cv-option"
+              ><input type="checkbox" data-section="social" />
+              <span data-i18n="social_title">Social Media</span></label
+            >
+            <label class="cv-option"
+              ><input type="checkbox" data-section="contact" />
+              <span data-i18n="nav_contact">Contact</span></label
+            >
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap">
+            <button
+              class="btn-primary"
+              onclick="printCV()"
+              data-i18n="cv_print"
+            >
+              🖨 Generate A4 CV
+            </button>
+          </div>
+          <div class="cv-preview-note" data-i18n="cv_note">
+            A one-page A4 CV will open in a new window. Click "Save as PDF"
+            inside that window to download it.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p style="margin-bottom: 6px">
+        Alex Rivera ·
+        <a
+          href="mailto:alex@example.dev"
+          style="color: var(--accent2); text-decoration: none"
+          >alex@example.dev</a
+        >
+      </p>
+      <p style="font-size: 12px" data-i18n="footer_copy">
+        Built with care · Open source on GitHub
+      </p>
+    </footer>
+
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/translation.js" type="module"></script>
+    <script src="./js/cv.js" type="module"></script>
+  </body>
+</html>
