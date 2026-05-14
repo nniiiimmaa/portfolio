@@ -42,10 +42,6 @@
   flex-direction: row-reverse;
 }
 
-/* ─────────────────────────────
-   BEAUTIFUL TIMELINE ANIMATION
-───────────────────────────── */
-
 .exp-item {
   position: relative;
 
@@ -204,5 +200,135 @@
 
   50% {
     transform: translateY(-2px);
+  }
+}
+
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* TAG */
+
+.tag {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+
+  color: var(--text);
+
+  overflow: hidden;
+
+  cursor: default;
+
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
+}
+
+/* glowing background */
+
+.tag::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    rgba(124,92,255,0.18),
+    rgba(0,212,255,0.12)
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+
+  z-index: 0;
+}
+
+/* animated shine */
+
+.tag::after {
+  content: "";
+
+  position: absolute;
+
+  top: -120%;
+  left: -120%;
+
+  width: 60%;
+  height: 300%;
+
+  transform: rotate(25deg);
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+/* content above effects */
+
+.tag {
+  isolation: isolate;
+}
+
+.tag > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* HOVER */
+
+.tag:hover {
+  transform:
+    translateY(-5px)
+    scale(1.05);
+
+  border-color: rgba(124,92,255,0.4);
+
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.18),
+    0 0 18px rgba(124,92,255,0.18);
+}
+
+.tag:hover::before {
+  opacity: 1;
+}
+
+.tag:hover::after {
+  opacity: 1;
+  animation: tagShine 0.9s ease;
+}
+
+/* shine movement */
+
+@keyframes tagShine {
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 180%;
   }
 }
