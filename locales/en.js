@@ -8,7 +8,7 @@ export default {
   nav_hobbies: "Hobbies",
   nav_contact: "Contact",
   hero_eyebrow: "Available for work",
-  hero_role: "Full-Stack Developer & Open Source Enthusiast",
+  hero_role: "Front-End Developer",
   hero_bio:
     "I build thoughtful digital experiences at the intersection of design and engineering. Passionate about clean architecture, developer tools, and the open web.",
   hero_cta1: "Get in touch",
@@ -20,15 +20,18 @@ export default {
   stat_certs: "Certifications",
   exp_label: "Work History",
   exp_title: "Experience",
-  exp1_role: "Senior Full-Stack Engineer",
+
+  exp1_role: "Web Developer Intern",
   exp1_desc:
-    "Led development of core Next.js deployment infrastructure serving 300k+ active projects. Reduced build times by 40% through parallelization strategies. Mentored a team of 5 junior engineers.",
-  exp2_role: "Software Engineer",
+    "Web Developer Intern at a real estate company, gaining practical experience in web development, website maintenance, and responsive design.",
+
+  exp2_role: "Front-End Developer Intern",
   exp2_desc:
-    "Built and maintained the merchant dashboard and payment analytics pipeline. Designed real-time fraud detection UI. Contributed to the public Stripe.js SDK.",
-  exp3_role: "Frontend Developer",
+    "Participated in team-based development processes, including code collaboration, debugging, and feature implementation, following structured workflows and agile practices. Gained practical experience in component-based architecture, version control, and maintaining consistency across large-scale applications.",
+
+  exp3_role: "Frontend Developer Assistant",
   exp3_desc:
-    "Developed merchant-facing storefronts and internal design system components. Improved Lighthouse score from 58 to 94 across flagship store themes.",
+    "Full-time Front-End Developer in a collaborative environment with around 25 developers, contributing to multilingual systems in Portuguese, English, and Spanish. Focused on improving scalability, code quality, and best practices while developing applications used across South America.",
   proj_label: "Selected Work",
   proj_title: "Projects",
   proj1_desc:

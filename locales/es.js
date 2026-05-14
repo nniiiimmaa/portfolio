@@ -8,7 +8,7 @@ export default {
   nav_hobbies: "Hobbies",
   nav_contact: "Contacto",
   hero_eyebrow: "Disponible para proyectos",
-  hero_role: "Desarrollador Full-Stack & Entusiasta Open Source",
+  hero_role: "Desarrollador Front-End",
   hero_bio:
     "Construyo experiencias digitales reflexivas en la intersección del diseño y la ingeniería. Apasionado por la arquitectura limpia, las herramientas para desarrolladores y la web abierta.",
   hero_cta1: "Ponte en contacto",
@@ -20,15 +20,18 @@ export default {
   stat_certs: "Certificaciones",
   exp_label: "Historial Laboral",
   exp_title: "Experiencia",
-  exp1_role: "Ingeniero Full-Stack Senior",
+
+  exp1_role: "Practicante de Desarrollo Web",
   exp1_desc:
-    "Lideró el desarrollo de la infraestructura de deployment de Next.js para 300k+ proyectos activos. Redujo tiempos de build en 40%. Mentorizó a 5 ingenieros junior.",
-  exp2_role: "Ingeniero de Software",
+    "Practicante de desarrollo web en una empresa inmobiliaria, adquiriendo experiencia práctica en desarrollo web, mantenimiento de sitios y diseño responsivo.",
+
+  exp2_role: "Practicante de Desarrollo Front-End",
   exp2_desc:
-    "Construyó y mantuvo el dashboard de comerciantes y el pipeline de análisis de pagos. Diseñó la UI de detección de fraude en tiempo real.",
-  exp3_role: "Desarrollador Frontend",
+    "Participó en procesos de desarrollo en equipo, incluyendo colaboración de código, depuración e implementación de funcionalidades siguiendo flujos de trabajo estructurados y metodologías ágiles. Obtuvo experiencia práctica en arquitectura basada en componentes, control de versiones y mantenimiento de consistencia en aplicaciones de gran escala.",
+
+  exp3_role: "Asistente de Desarrollador Frontend",
   exp3_desc:
-    "Desarrolló storefronts para comerciantes y componentes del design system interno. Mejoró el score de Lighthouse de 58 a 94.",
+    "Desarrollador Front-End de tiempo completo en un entorno colaborativo con alrededor de 25 desarrolladores, contribuyendo a sistemas multilingües en portugués, inglés y español. Enfocado en mejorar la escalabilidad, la calidad del código y las mejores prácticas en aplicaciones utilizadas en toda Sudamérica.",
   proj_label: "Trabajos Seleccionados",
   proj_title: "Proyectos",
   proj1_desc:

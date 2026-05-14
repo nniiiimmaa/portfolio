@@ -41,3 +41,168 @@
 [dir="rtl"] .exp-item {
   flex-direction: row-reverse;
 }
+
+/* ─────────────────────────────
+   BEAUTIFUL TIMELINE ANIMATION
+───────────────────────────── */
+
+.exp-item {
+  position: relative;
+
+  display: flex;
+  gap: 1.6rem;
+  padding: 1.8rem 0;
+
+  border-bottom: 1px solid var(--border);
+
+  animation: expFloatIn 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+/* stagger */
+
+.exp-item:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.exp-item:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+.exp-item:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+
+/* reveal animation */
+
+@keyframes expFloatIn {
+  0% {
+    opacity: 0;
+    transform:
+      translateY(50px)
+      scale(0.96);
+    filter: blur(10px);
+  }
+
+  60% {
+    opacity: 1;
+    transform:
+      translateY(-6px)
+      scale(1.01);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+    filter: blur(0);
+  }
+}
+
+/* hover */
+
+.exp-item:hover {
+  transform: translateY(-6px);
+}
+
+/* ── DOT ── */
+
+.exp-dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 0 4px var(--tag-bg),
+    0 0 14px rgba(124,92,255,0.6);
+
+  animation: dotPulse 2.4s infinite ease-in-out;
+}
+
+/* glowing pulse */
+
+@keyframes dotPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 4px var(--tag-bg),
+      0 0 12px rgba(124,92,255,0.45);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 6px rgba(124,92,255,0.15),
+      0 0 22px rgba(124,92,255,0.85);
+  }
+}
+
+/* ── TIMELINE LINE ── */
+
+.exp-line {
+  width: 1px;
+  flex: 1;
+
+  margin-top: 8px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(124,92,255,0.9),
+    var(--border)
+  );
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* animated light sweep */
+
+.exp-line::after {
+  content: "";
+
+  position: absolute;
+
+  top: -40%;
+  left: 0;
+
+  width: 100%;
+  height: 40%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.9),
+    transparent
+  );
+
+  animation: lineGlow 2.8s linear infinite;
+}
+
+@keyframes lineGlow {
+  to {
+    top: 140%;
+  }
+}
+
+/* content floating */
+
+.exp-content {
+  animation: contentFloat 5s ease-in-out infinite;
+}
+
+@keyframes contentFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}

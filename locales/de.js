@@ -8,7 +8,7 @@ export default {
   nav_hobbies: "Hobbys",
   nav_contact: "Kontakt",
   hero_eyebrow: "Verfügbar für Projekte",
-  hero_role: "Full-Stack-Entwickler & Open-Source-Enthusiast",
+  hero_role: "Front-End-Entwickler",
   hero_bio:
     "Ich entwickle durchdachte digitale Erlebnisse an der Schnittstelle von Design und Engineering. Leidenschaftlich für saubere Architektur, Developer-Tools und das offene Web.",
   hero_cta1: "Kontakt aufnehmen",
@@ -20,15 +20,18 @@ export default {
   stat_certs: "Zertifizierungen",
   exp_label: "Beruflicher Werdegang",
   exp_title: "Erfahrung",
-  exp1_role: "Senior Full-Stack-Ingenieur",
+
+  exp1_role: "Webentwickler-Praktikant",
   exp1_desc:
-    "Leitete die Entwicklung der Next.js-Deployment-Infrastruktur für 300k+ aktive Projekte. Reduzierte Build-Zeiten um 40%. Betreute ein Team von 5 Junior-Ingenieuren.",
-  exp2_role: "Softwareingenieur",
+    "Praktikant als Webentwickler in einem Immobilienunternehmen mit praktischer Erfahrung in Webentwicklung, Website-Wartung und responsivem Design.",
+
+  exp2_role: "Front-End-Entwickler-Praktikant",
   exp2_desc:
-    "Entwickelte und pflegte das Händler-Dashboard und die Zahlungsanalytik-Pipeline. Entwarf Echtzeit-Betrugserkennung.",
-  exp3_role: "Frontend-Entwickler",
+    "Teilnahme an teamorientierten Entwicklungsprozessen, einschließlich Code-Zusammenarbeit, Debugging und Feature-Implementierung unter Verwendung strukturierter Workflows und agiler Methoden. Praktische Erfahrung mit komponentenbasierter Architektur, Versionskontrolle und der Pflege konsistenter großer Anwendungen gesammelt.",
+
+  exp3_role: "Frontend-Entwickler-Assistent",
   exp3_desc:
-    "Entwickelte Händler-Storefronts und interne Design-System-Komponenten. Verbesserte Lighthouse-Score von 58 auf 94.",
+    "Vollzeit-Frontend-Entwickler in einem kollaborativen Umfeld mit rund 25 Entwicklern und Mitarbeit an mehrsprachigen Systemen in Portugiesisch, Englisch und Spanisch. Fokus auf Skalierbarkeit, Codequalität und Best Practices bei der Entwicklung von Anwendungen für Nutzer in ganz Südamerika.",
   proj_label: "Ausgewählte Arbeiten",
   proj_title: "Projekte",
   proj1_desc:

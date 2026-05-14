@@ -4,6 +4,38 @@
   position: relative;
 }
 
+#hero-name {
+  display: inline-flex;
+  gap: 0.02em;
+
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+
+  cursor: default;
+}
+
+/* letters */
+
+#hero-name span {
+  display: inline-block;
+
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.25s ease;
+
+  will-change: transform;
+}
+
+/* each letter moves individually */
+
+#hero-name span:hover {
+  transform:
+    translateY(-12px)
+    rotate(-8deg)
+    scale(1.08);
+}
+
 .hero-inner {
   display: flex;
   align-items: center;
@@ -109,6 +141,104 @@
   border-color: var(--accent);
 }
 
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* HERO IMAGE */
+.hero-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+/* IMAGE */
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
+}
+
+/* hover zoom + tilt */
+.hero-photo:hover img {
+  transform:
+    scale(1.06)
+    rotate(1deg);
+  filter:
+    brightness(1.05)
+    contrast(1.05);
+}
+
+/* animated light shine */
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -120%;
+  width: 60%;
+  height: 300%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* shine animation */
+
+.hero-photo:hover::before {
+  opacity: 1;
+  animation: heroShine 1.2s ease;
+}
+
+@keyframes heroShine {
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 180%;
+  }
+}
+
+/* soft glow */
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(124,92,255,0.18),
+      transparent 70%
+    );
+  opacity: 0;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+.hero-photo:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* ── STATS ROW ── */
 .stats-row {
   display: flex;
@@ -122,6 +252,14 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 14px 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--bg2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .stat-val {
@@ -136,6 +274,61 @@
   font-size: 12px;
   color: var(--muted);
   margin-top: 4px;
+}
+
+/* hover lift */
+.stat-item:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 0 25px rgba(120, 120, 255, 0.18);
+}
+
+/* NEON ROTATING BORDER */
+.stat-item::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 290deg,
+    #7c5cff 315deg,
+    #00d4ff 335deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  animation: rotateNeon 2.5s linear infinite;
+  transition: opacity 0.35s ease;
+}
+
+/* show border on hover */
+.stat-item:hover::before {
+  opacity: 1;
+}
+
+/* inner card layer */
+.stat-item::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--bg2);
+  z-index: 1;
+}
+
+/* keep content above effect */
+.stat-item > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* animation */
+@keyframes rotateNeon {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ── ABOUT RESPONSIVE ── */

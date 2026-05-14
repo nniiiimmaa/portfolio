@@ -1,0 +1,15 @@
+const button = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    button.classList.add("show");
+  } else {
+    button.classList.remove("show");
+  }
+});
+
+button.addEventListener("click", () => {
+  document.getElementById("top").scrollIntoView({
+    behavior: "smooth",
+  });
+});

@@ -27,6 +27,26 @@ nav {
   font-size: 15px;
   color: var(--accent2);
   letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-logo img {
+  width: 25px;
+}
+
+.nav-logo img {
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
 }
 
 .nav-links {
@@ -56,6 +76,31 @@ nav {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+
+/* Animated glass shimmer on navbar */
+nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255,255,255,0.06) 50%,
+      transparent 80%
+    );
+
+  transform: translateX(-120%);
+  animation: navShimmer 4s linear infinite;
+}
+
+@keyframes navShimmer {
+  to {
+    transform: translateX(120%);
+  }
 }
 
 .ctrl-btn {
@@ -230,6 +275,35 @@ nav {
   gap: 8px;
   margin-top: 6px;
   flex-wrap: wrap;
+}
+
+/* back to top */
+#back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--tag-bg);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
 }
 
 /* ── NAV RESPONSIVE ── */

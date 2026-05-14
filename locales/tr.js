@@ -8,7 +8,7 @@ export default {
   nav_hobbies: "Hobiler",
   nav_contact: "İletişim",
   hero_eyebrow: "İş fırsatlarına açık",
-  hero_role: "Full-Stack Geliştirici & Açık Kaynak Meraklısı",
+  hero_role: "Front-End Geliştirici",
   hero_bio:
     "Tasarım ve mühendisliğin kesişiminde düşünceli dijital deneyimler oluşturuyorum. Temiz mimari, geliştirici araçları ve açık web konusunda tutkulum.",
   hero_cta1: "İletişime geç",
@@ -20,15 +20,17 @@ export default {
   stat_certs: "Sertifika",
   exp_label: "İş Geçmişi",
   exp_title: "Deneyim",
-  exp1_role: "Kıdemli Full-Stack Mühendis",
+  exp1_role: "Web Geliştirici Stajyeri",
   exp1_desc:
-    "300k+ aktif projeye hizmet veren temel Next.js deployment altyapısının geliştirilmesine liderlik etti. Build sürelerini %40 azalttı. 5 junior mühendise mentorluk yaptı.",
-  exp2_role: "Yazılım Mühendisi",
+    "Bir emlak şirketinde web geliştirici stajyeri olarak çalışarak web geliştirme, web sitesi bakımı ve responsive tasarım konularında pratik deneyim kazandı.",
+
+  exp2_role: "Front-End Geliştirici Stajyeri",
   exp2_desc:
-    "Satıcı panosunu ve ödeme analitik pipeline'ını oluşturup bakımını yaptı. Gerçek zamanlı sahtekarlık tespiti arayüzü tasarladı.",
-  exp3_role: "Frontend Geliştirici",
+    "Kod iş birliği, hata ayıklama ve özellik geliştirme dahil olmak üzere ekip tabanlı geliştirme süreçlerine, yapılandırılmış iş akışları ve çevik yöntemler doğrultusunda katıldı. Bileşen tabanlı mimari, versiyon kontrolü ve büyük ölçekli uygulamalarda tutarlılığın korunması konularında pratik deneyim kazandı.",
+
+  exp3_role: "Frontend Geliştirici Asistanı",
   exp3_desc:
-    "Satıcı mağazaları ve iç tasarım sistemi bileşenleri geliştirdi. Lighthouse puanını 58'den 94'e yükseltti.",
+    "Yaklaşık 25 geliştiriciden oluşan iş birliğine dayalı bir ortamda tam zamanlı Front-End Geliştirici olarak Portekizce, İngilizce ve İspanyolca çok dilli sistemlere katkıda bulundu. Güney Amerika genelinde kullanılan uygulamalarda ölçeklenebilirlik, kod kalitesi ve en iyi uygulamaları geliştirmeye odaklandı.",
   proj_label: "Seçili Çalışmalar",
   proj_title: "Projeler",
   proj1_desc:
