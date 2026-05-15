@@ -261,3 +261,54 @@ section {
   right: 0;
   border-radius: 0 3px 3px 0;
 }
+
+.section-label {
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease,
+    letter-spacing 0.35s ease;
+}
+
+/* smooth hover */
+.section-label:hover {
+  transform: translateX(4px);
+  color: var(--accent2);
+  letter-spacing: 0.08em;
+}
+
+.section-title {
+  position: relative;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    text-shadow 0.35s ease;
+}
+
+/* animated underline */
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      to right,
+      var(--accent2),
+      transparent
+    );
+  transition: width 0.4s ease;
+}
+
+/* hover effect */
+.section-title:hover {
+  transform: translateY(-2px);
+  text-shadow:
+    0 0 18px rgba(124,92,255,0.16);
+}
+
+/* reveal underline */
+.section-title:hover::after {
+  width: 100%;
+}

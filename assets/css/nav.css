@@ -41,7 +41,8 @@ nav {
 }
 
 @keyframes logoFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(2px);
   }
   50% {
@@ -85,13 +86,12 @@ nav::before {
   inset: 0;
   pointer-events: none;
 
-  background:
-    linear-gradient(
-      120deg,
-      transparent 20%,
-      rgba(255,255,255,0.06) 50%,
-      transparent 80%
-    );
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 80%
+  );
 
   transform: translateX(-120%);
   animation: navShimmer 4s linear infinite;
@@ -277,33 +277,125 @@ nav::before {
   flex-wrap: wrap;
 }
 
-/* back to top */
 #back-to-top {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: var(--tag-bg);
+  background: linear-gradient(
+    135deg,
+    rgba(124, 92, 255, 0.18),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
   color: white;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
+  transform: translateY(14px) scale(0.92);
   transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  z-index: 999;
 }
 
+/* glowing ring */
+#back-to-top::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(124, 92, 255, 0.8),
+    transparent 40%
+  );
+  animation: rotateRing 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* inner layer */
+#back-to-top::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: var(--tag-bg);
+  z-index: 0;
+}
+
+/* icon */
+#back-to-top svg,
+#back-to-top i,
+#back-to-top span {
+  position: relative;
+  z-index: 2;
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
+}
+
+/* visible state */
 #back-to-top.show {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0) scale(1);
+  animation: floatButton 3s ease-in-out infinite;
+}
 
-  transform: translateY(0);
+/* hover */
+#back-to-top:hover {
+  border-color: rgba(124, 92, 255, 0.4);
+  transform: translateY(-4px) scale(1.06);
+  box-shadow:
+    0 10px 30px rgba(124, 92, 255, 0.18),
+    0 0 18px rgba(124, 92, 255, 0.2);
+}
+
+/* show animated ring */
+#back-to-top:hover::before {
+  opacity: 1;
+}
+
+/* icon movement */
+#back-to-top:hover svg,
+#back-to-top:hover i,
+#back-to-top:hover span {
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* rotating ring */
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* floating idle animation */
+@keyframes floatButton {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-4px) scale(1.01);
+  }
 }
 
 /* ── NAV RESPONSIVE ── */
@@ -320,7 +412,7 @@ nav::before {
   .mobile-drawer {
     display: block;
   }
-  .nav-controls{
+  .nav-controls {
     display: none;
   }
 }

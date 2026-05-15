@@ -83,6 +83,7 @@
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
       <div class="nav-controls">
+        <img id="selected-flag" src="" alt="" />
         <select class="lang-select" id="lang-picker" title="Language">
           <option value="en">EN</option>
           <option value="fa">فا</option>
@@ -163,9 +164,7 @@
               <span>a</span>
             </h1>
             <p class="hero-role">
-              <span data-i18n="hero_role"
-                >Front-End Developer & Open Source Enthusiast</span
-              >
+              <span data-i18n="hero_role">Front-End Developer</span>
             </p>
             <p class="hero-bio" data-i18n="hero_bio">
               I build thoughtful digital experiences at the intersection of
@@ -659,7 +658,9 @@
               <img src="./assets/svg/google-logo.svg" alt="google logo" />
             </div>
             <div>
-              <div class="card-title" data-i18n="edu7_degree">Google it support professional certification</div>
+              <div class="card-title" data-i18n="edu7_degree">
+                Google it support professional certification
+              </div>
               <div class="card-sub">Google</div>
               <div class="card-date">2023</div>
               <div>
@@ -681,7 +682,9 @@
               />
             </div>
             <div>
-              <div class="card-title" data-i18n="edu8_degree">Responsive Web Design</div>
+              <div class="card-title" data-i18n="edu8_degree">
+                Responsive Web Design
+              </div>
               <div class="card-sub">freeCodeCamp</div>
               <div class="card-date">2026</div>
               <div>
@@ -706,9 +709,9 @@
 
         <div style="margin-bottom: 1.4rem">
           <div
+            class="frontend"
             style="
               font-size: 12px;
-              color: var(--muted);
               margin-bottom: 10px;
               font-family: &quot;DM Mono&quot;, monospace;
             "
@@ -718,7 +721,13 @@
           </div>
           <div class="skills-grid">
             <div class="skill-pill">
-              <span class="skill-dot purple"></span>React / Next.js
+              <span class="skill-dot purple"></span>HTML5
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>CSS / SCSS
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>JavaScript
             </div>
             <div class="skill-pill">
               <span class="skill-dot purple"></span>TypeScript
@@ -727,22 +736,16 @@
               <span class="skill-dot purple"></span>Vue / Nuxt
             </div>
             <div class="skill-pill">
-              <span class="skill-dot purple"></span>Svelte
-            </div>
-            <div class="skill-pill">
-              <span class="skill-dot purple"></span>CSS / SCSS
-            </div>
-            <div class="skill-pill">
-              <span class="skill-dot purple"></span>WebGL
+              <span class="skill-dot purple"></span>Tailwind CSS
             </div>
           </div>
         </div>
 
         <div style="margin-bottom: 1.4rem">
           <div
+            class="backend"
             style="
               font-size: 12px;
-              color: var(--muted);
               margin-bottom: 10px;
               font-family: &quot;DM Mono&quot;, monospace;
             "
@@ -751,10 +754,12 @@
             Backend
           </div>
           <div class="skills-grid">
-            <div class="skill-pill"><span class="skill-dot"></span>Node.js</div>
-            <div class="skill-pill"><span class="skill-dot"></span>Go</div>
-            <div class="skill-pill"><span class="skill-dot"></span>Rust</div>
-            <div class="skill-pill"><span class="skill-dot"></span>Python</div>
+            <div class="skill-pill"><span class="skill-dot"></span>PHP</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Laravel</div>
+            <div class="skill-pill">
+              <span class="skill-dot"></span>SQL Server
+            </div>
+            <div class="skill-pill"><span class="skill-dot"></span>mySQL</div>
             <div class="skill-pill">
               <span class="skill-dot"></span>PostgreSQL
             </div>
@@ -764,9 +769,9 @@
 
         <div>
           <div
+            class="infra"
             style="
               font-size: 12px;
-              color: var(--muted);
               margin-bottom: 10px;
               font-family: &quot;DM Mono&quot;, monospace;
             "
@@ -779,19 +784,10 @@
               <span class="skill-dot orange"></span>Docker
             </div>
             <div class="skill-pill">
-              <span class="skill-dot orange"></span>Kubernetes
-            </div>
-            <div class="skill-pill">
               <span class="skill-dot orange"></span>AWS
             </div>
             <div class="skill-pill">
-              <span class="skill-dot orange"></span>Terraform
-            </div>
-            <div class="skill-pill">
               <span class="skill-dot orange"></span>GitHub Actions
-            </div>
-            <div class="skill-pill">
-              <span class="skill-dot orange"></span>Prometheus
             </div>
           </div>
         </div>
@@ -807,47 +803,70 @@
         </h2>
         <div class="grid-3">
           <div class="hobby-card">
-            <div class="hobby-emoji">📸</div>
-            <div class="hobby-name" data-i18n="hobby1_name">Photography</div>
+            <div class="hobby-emoji">
+              <img src="./assets/svg/travel.svg" alt="travel icon" />
+            </div>
+            <div class="hobby-name" data-i18n="hobby1_name">Traveling</div>
             <div class="hobby-desc" data-i18n="hobby1_desc">
-              Street & landscape photography across 30+ countries.
+              Exploring new cultures, cuisines, and landscapes. 5 countries
+              visited across 3 continents.
             </div>
           </div>
           <div class="hobby-card">
-            <div class="hobby-emoji">🎵</div>
-            <div class="hobby-name" data-i18n="hobby2_name">
-              Music Production
+            <div class="hobby-emoji">
+              <img src="./assets/svg/drone.svg" alt="drone icon" />
             </div>
+            <div class="hobby-name" data-i18n="hobby2_name">Drone</div>
             <div class="hobby-desc" data-i18n="hobby2_desc">
-              Electronic ambient music. Released two EPs on Bandcamp.
+              Aerial photography and videography. Capturing unique perspectives
+              and landscapes from above.
             </div>
           </div>
           <div class="hobby-card">
-            <div class="hobby-emoji">🧗</div>
-            <div class="hobby-name" data-i18n="hobby3_name">Rock Climbing</div>
+            <div class="hobby-emoji">
+              <img src="./assets/svg/volleyball.svg" alt="volleyball icon" />
+            </div>
+            <div class="hobby-name" data-i18n="hobby3_name">Volleyball</div>
             <div class="hobby-desc" data-i18n="hobby3_desc">
-              Bouldering & sport climbing. V8 grade indoors.
+              Playing volleyball in local leagues and tournaments.
             </div>
           </div>
           <div class="hobby-card">
-            <div class="hobby-emoji">📚</div>
-            <div class="hobby-name" data-i18n="hobby4_name">Reading</div>
+            <div class="hobby-emoji">
+              <img src="./assets/svg/psychology.svg" alt="psychology icon" />
+            </div>
+            <div class="hobby-name" data-i18n="hobby4_name">Psychology</div>
             <div class="hobby-desc" data-i18n="hobby4_desc">
-              Sci-fi, philosophy of mind, and systems thinking.
+              Studied psychology and interested in human behavior, cognition,
+              and philosophical questions about existence and knowledge.
             </div>
           </div>
           <div class="hobby-card">
-            <div class="hobby-emoji">🌱</div>
-            <div class="hobby-name" data-i18n="hobby5_name">Open Source</div>
+            <div class="hobby-emoji">
+              <img src="./assets/svg/language.svg" alt="language icon" />
+            </div>
+            <div class="hobby-name" data-i18n="hobby5_name">
+              Language Learning
+            </div>
             <div class="hobby-desc" data-i18n="hobby5_desc">
-              Regular contributor. OSS is a love language.
+              Passionate about learning new languages and exploring different
+              cultures through language. Currently proficient in English,
+              Persian, Turkish, and Portuguese. Interested in learning, Arabic,
+              German and Spanish.
             </div>
           </div>
           <div class="hobby-card">
-            <div class="hobby-emoji">✈️</div>
-            <div class="hobby-name" data-i18n="hobby6_name">Travel</div>
+            <div class="hobby-emoji">
+              <img src="./assets/svg/faravahar.svg" alt="farvehar icon" />
+            </div>
+            <div class="hobby-name" data-i18n="hobby6_name">
+              Persian History
+            </div>
             <div class="hobby-desc" data-i18n="hobby6_desc">
-              Slow travel, local food, off-the-beaten-path adventures.
+              Fascinated by ancient Persia and its spiritual heritage,
+              especially Zoroastrianism — the world’s oldest monotheistic faith
+              that shaped Persian culture, philosophy, and the idea of good
+              versus evil.
             </div>
           </div>
         </div>
@@ -858,67 +877,106 @@
         <div class="section-label" data-i18n="social_label">Find Me Online</div>
         <h2 class="section-title" data-i18n="social_title">Social Media</h2>
         <div class="social-grid">
-          <a href="#" class="social-link">
-            <div class="social-icon">🐙</div>
+          <a
+            href="https://github.com/nniiiimmaa"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="social-icon">
+              <img src="./assets/svg/github.svg" alt=" github icon" />
+            </div>
             <div>
               <div class="social-name">GitHub</div>
-              <div class="social-handle">@alexrivera</div>
+              <div class="social-handle">@nniiiimmaa</div>
             </div>
           </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">💼</div>
+          <a
+            href="https://www.linkedin.com/in/nniiiimmaa/"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="social-icon">
+              <img
+                src="./assets/svg/linkedin.svg"
+                alt="linkedin icon"
+                class="linkedin-svg"
+              />
+            </div>
             <div>
               <div class="social-name">LinkedIn</div>
-              <div class="social-handle">alex-rivera-dev</div>
+              <div class="social-handle">nniiiimmaa</div>
             </div>
           </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">🐦</div>
+          <a
+            href="https://x.com/nniiiimmaa"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="social-icon">
+              <img src="./assets/svg/x.svg" alt="x icon" />
+            </div>
             <div>
               <div class="social-name">Twitter / X</div>
-              <div class="social-handle">@alexrivera</div>
+              <div class="social-handle">@nniiiimmaa</div>
             </div>
           </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">🟦</div>
+          <a
+            href="https://bsky.app/profile/nniiiimmaa.bsky.social"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="social-icon">
+              <img src="./assets/svg/bluesky.svg" alt="bluesky icon" />
+            </div>
             <div>
               <div class="social-name">Bluesky</div>
-              <div class="social-handle">@alexrivera.dev</div>
+              <div class="social-handle">@nniiiimmaa</div>
             </div>
           </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">📝</div>
+          <a
+            href="https://dev.to/nniiiimmaa"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="social-icon">
+              <img src="./assets/svg/devto.svg" alt="devto icon" />
+            </div>
             <div>
               <div class="social-name">Dev.to</div>
-              <div class="social-handle">@alexrivera</div>
+              <div class="social-handle">@nniiiimmaa</div>
             </div>
           </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">🎮</div>
-            <div>
-              <div class="social-name">Mastodon</div>
-              <div class="social-handle">@alex@hachyderm.io</div>
+          <a
+            href="https://www.instagram.com/nniiiiiimmaa/"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="social-icon">
+              <img src="./assets/svg/instagram.svg" alt="instagram icon" />
             </div>
-          </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">📸</div>
             <div>
               <div class="social-name">Instagram</div>
-              <div class="social-handle">@alexrivera.lens</div>
+              <div class="social-handle">@nniiiiiimmaa</div>
             </div>
           </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">📺</div>
+          <a
+            href="https://www.npmjs.com/~nniiiimmaa"
+            target="_blank"
+            class="social-link"
+          >
+            <div class="social-icon">
+              <img src="./assets/svg/npm.svg" alt="npm icon" />
+            </div>
             <div>
-              <div class="social-name">YouTube</div>
-              <div class="social-handle">Alex Rivera Dev</div>
+              <div class="social-name">NPM</div>
+              <div class="social-handle">~nniiiimmaa</div>
             </div>
           </a>
         </div>
       </section>
 
       <!-- ── CONTACT ── -->
-      <section id="contact">
+      <!-- <section id="contact">
         <div class="section-label" data-i18n="contact_label">Let's Talk</div>
         <h2 class="section-title" data-i18n="contact_title">Get In Touch</h2>
         <div class="contact-grid">
@@ -945,11 +1003,11 @@
                   color: var(--muted);
                 "
               >
-                <span style="font-size: 16px">✉️</span>
+                <span style="font-size: 16px">&#9993;</span>
                 <a
                   href="mailto:alex@example.dev"
                   style="color: var(--accent2); text-decoration: none"
-                  >alex@example.dev</a
+                  >nima.javascript@gmail.com</a
                 >
               </div>
               <div
@@ -962,7 +1020,7 @@
                 "
               >
                 <span style="font-size: 16px">📍</span>
-                <span>San Francisco, CA (remote-friendly)</span>
+                <span>Paraná, Brasil (remote-friendly)</span>
               </div>
               <div
                 style="
@@ -978,7 +1036,7 @@
               </div>
             </div>
           </div>
-          <div class="contact-form">
+          <form class="contact-form">
             <div class="form-group">
               <label class="form-label" data-i18n="contact_name">Name</label>
               <input type="text" class="form-input" placeholder="Jane Smith" />
@@ -1007,9 +1065,9 @@
             >
               Send message
             </button>
-          </div>
+          </form>
         </div>
-      </section>
+      </section> -->
 
       <!-- ── CV / PDF ── -->
       <section id="cv">
@@ -1070,18 +1128,27 @@
       </section>
     </main>
 
-    <footer>
-      <p style="margin-bottom: 6px">
-        Alex Rivera ·
-        <a
-          href="mailto:alex@example.dev"
-          style="color: var(--accent2); text-decoration: none"
-          >alex@example.dev</a
-        >
-      </p>
-      <p style="font-size: 12px" data-i18n="footer_copy">
-        Built with care · Open source on GitHub
-      </p>
+    <footer class="footer">
+      <div class="footer-glow"></div>
+
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img src="./assets/svg/logo.svg" alt="Nima logo" />
+            <span>Nima</span>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <a href="mailto:nima.javascript@gmail.com" class="footer-email">
+            nima.javascript@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom" data-i18n="footer_copy">
+        © 2026 Nima. All rights reserved.
+      </div>
     </footer>
 
     <a href="#top" id="back-to-top"> ↑ </a>
@@ -1090,6 +1157,7 @@
     <script src="./js/theme.js"></script>
     <script src="./js/back-to-top.js"></script>
     <script src="./js/translation.js" type="module"></script>
+    <script src="./js/flag.js"></script>
     <script src="./js/cv.js" type="module"></script>
   </body>
 </html>

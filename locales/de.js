@@ -1,5 +1,6 @@
 export default {
   dir: "ltr",
+
   // Navigation Section
   nav_about: "Über mich",
   nav_exp: "Erfahrung",
@@ -8,93 +9,149 @@ export default {
   nav_skills: "Fähigkeiten",
   nav_hobbies: "Hobbys",
   nav_contact: "Kontakt",
+
   // Hero Section
-  hero_eyebrow: "Verfügbar für Projekte",
+  hero_eyebrow: "Verfügbar für neue Möglichkeiten",
   hero_role: "Front-End-Entwickler",
-  hero_bio: "Ich entwickle durchdachte digitale Erlebnisse an der Schnittstelle von Design und Engineering. Leidenschaftlich für saubere Architektur, Developer-Tools und das offene Web.",
+  hero_bio:
+    "Durchdachte digitale Erlebnisse werden an der Schnittstelle von Design und Engineering entwickelt, wobei ein besonderer Schwerpunkt auf sauberer Architektur, Entwicklerwerkzeugen und modernen Webtechnologien gelegt wird.",
+
   hero_cta1: "Kontakt aufnehmen",
   hero_cta2: "Lebenslauf herunterladen",
-  hero_avail: "Offen für Möglichkeiten",
+  hero_avail: "Offen für berufliche Möglichkeiten",
+
   // Stats Section
   stat_years: "Jahre Erfahrung",
-  stat_projects: "Projekte geliefert",
-  stat_stars: "GitHub-Sterne",
-  stat_certs: "Zertifizierungen",
+  stat_projects: "Abgeschlossene Projekte",
+  stat_stars: "GitHub-Stars",
+  stat_certs: "Zertifikate",
+
   // Experience Section
   exp_label: "Beruflicher Werdegang",
   exp_title: "Erfahrung",
+
   exp1_role: "Webentwickler-Praktikant",
-  exp1_desc: "Praktikant als Webentwickler in einem Immobilienunternehmen mit praktischer Erfahrung in Webentwicklung, Website-Wartung und responsivem Design.",
+  exp1_desc:
+    "Praktische Erfahrungen in der Webentwicklung, Website-Wartung und im responsiven Design wurden während eines Praktikums in einem Immobilienunternehmen gesammelt.",
+
   exp2_role: "Front-End-Entwickler-Praktikant",
-  exp2_desc: "Teilnahme an teamorientierten Entwicklungsprozessen, einschließlich Code-Zusammenarbeit, Debugging und Feature-Implementierung unter Verwendung strukturierter Workflows und agiler Methoden. Praktische Erfahrung mit komponentenbasierter Architektur, Versionskontrolle und der Pflege konsistenter großer Anwendungen gesammelt.",
+  exp2_desc:
+    "An teamorientierten Entwicklungsprozessen, einschließlich Code-Zusammenarbeit, Fehlerbehebung und Feature-Implementierung, wurde unter Anwendung strukturierter Arbeitsabläufe und agiler Methoden mitgewirkt. Darüber hinaus wurden Erfahrungen mit komponentenbasierter Architektur, Versionskontrolle und der Konsistenz großer Anwendungen gesammelt.",
+
   exp3_role: "Frontend-Entwickler-Assistent",
-  exp3_desc: "Vollzeit-Frontend-Entwickler in einem kollaborativen Umfeld mit rund 25 Entwicklern und Mitarbeit an mehrsprachigen Systemen in Portugiesisch, Englisch und Spanisch. Fokus auf Skalierbarkeit, Codequalität und Best Practices bei der Entwicklung von Anwendungen für Nutzer in ganz Südamerika.",
+  exp3_desc:
+    "Mehrsprachige Systeme in Portugiesisch, Englisch und Spanisch wurden innerhalb eines kollaborativen Umfelds mit etwa 25 Entwicklern entwickelt. Der Schwerpunkt wurde dabei auf Skalierbarkeit, Codequalität und bewährte Methoden bei Anwendungen gelegt, die in ganz Südamerika eingesetzt werden.",
+
   // Projects Section
   proj_label: "Ausgewählte Arbeiten",
   proj_title: "Projekte",
-  proj1_desc: "Entwickelte das Frontend für Sprinter, eine Kanban-basierte Aufgabenverteilungsplattform mit Vue.js und Laravel. Fokus auf Aufgabenmanagement, Benutzerfreundlichkeit und reibungslose Nutzererfahrung.",
-  proj2_desc: "Entwickelte eine moderne und responsive Landingpage für verschiedene Bereiche, optimierte die Benutzererfahrung auf unterschiedlichen Geräten und legte Wert auf klare visuelle Kommunikation.",
-  proj3_desc: "Entwickelte ein Full-Stack-Unternehmensportal mit Integration mehrerer interner Systeme, darunter Mitarbeiterhistorie, Unternehmensrichtlinien, Dokumentenspeicherung und historische Archive.",
-  proj4_desc: "Entwickelte das Frontend einer Zahnarztsuchplattform für Dental Uni, damit Nutzer über eine responsive und intuitive Oberfläche Partnerzahnärzte finden können.",
-  proj5_desc: "Erstellte einen Frontend-Klon einer Amazon-Bestellseite. Reproduzierte Layout und Styling, entwickelte responsive Komponenten und implementierte grundlegende Interaktivität mit DOM-Manipulation und Event-Handling.",
-  proj6_desc: "Entwickelte eine interaktive Plattform für ein psychoedukatives Spiel für Kinder im Alter von 9 bis 13 Jahren, das Spielmechaniken, Regeln und Punktesysteme über eine benutzerfreundliche Oberfläche erklärt.",
- // Education Section
+
+  proj1_desc:
+    "Das Frontend von Sprinter, einer Kanban-basierten Aufgabenverteilungsplattform auf Basis von Vue.js und Laravel, wurde mit Fokus auf Workflow-Effizienz, Benutzerfreundlichkeit und eine nahtlose Nutzererfahrung entwickelt.",
+
+  proj2_desc:
+    "Eine moderne und responsive Landingpage wurde entwickelt und optimiert, um eine konsistente Benutzererfahrung auf verschiedenen Geräten sowie eine klare visuelle Kommunikation sicherzustellen.",
+
+  proj3_desc:
+    "Ein Full-Stack-Unternehmensportal zur Integration mehrerer interner Systeme, einschließlich Mitarbeiterhistorienverwaltung, Unternehmensrichtlinien, Dokumentenspeicherung und historischer Archive, wurde entwickelt.",
+
+  proj4_desc:
+    "Das Frontend einer Zahnarztsuchplattform für Dental Uni wurde entwickelt, damit Nutzer über eine responsive und intuitive Oberfläche Partnerzahnärzte finden können.",
+
+  proj5_desc:
+    "Ein Front-End-Klon einer Amazon-Bestellseite wurde entwickelt, wobei Layout und Styling präzise nachgebildet wurden. Responsive Komponenten und interaktive Funktionen wurden mithilfe von DOM-Manipulation und Event-Handling umgesetzt.",
+
+  proj6_desc:
+    "Eine interaktive Plattform für ein psychoedukatives Spiel für Kinder im Alter von 9 bis 13 Jahren wurde entwickelt, um Spielmechaniken, Regeln und Punktesysteme über eine benutzerfreundliche Oberfläche zu vermitteln.",
+
+  // Education Section
   edu_label: "Akademischer Hintergrund",
   edu_title: "Ausbildung",
+
   edu1_degree: "TÖMER-Abschluss (Türkisch-Sprachzertifikat)",
-  edu1_desc: "Absolvierte ein einjähriges Studium an der Karamanoglu Mehmetbey Universität und erhielt ein TÖMER-Zertifikat für die türkische Sprache. Entwickelte Fähigkeiten im Lesen, Schreiben, Hören und Sprechen mit Fokus auf akademische und alltägliche Kommunikation.",
+  edu1_desc:
+    "Ein einjähriges Studium an der Karamanoglu Mehmetbey Universität wurde abgeschlossen, wobei ein TÖMER-Zertifikat für die türkische Sprache erworben wurde. Fähigkeiten im Lesen, Schreiben, Hören und Sprechen wurden mit Schwerpunkt auf akademischer und alltäglicher Kommunikation entwickelt.",
+
   edu2_degree: "Goethe-Vorbereitungsabschluss",
-  edu2_desc: "Studierte 9 Monate lang Deutsch an der Akdeniz Universität (Literaturgebäude) und absolvierte die Goethe-basierten Aspekte Neu A1-, A2- und B1-Stufen. Entwickelte grundlegende Fähigkeiten im Lesen, Schreiben, Hören und Sprechen mit Schwerpunkt auf strukturierter Grammatik und praktischer Kommunikation.",
+  edu2_desc:
+    "Deutschkenntnisse wurden über einen Zeitraum von neun Monaten an der Akdeniz Universität (Literaturgebäude) erworben, wobei die Goethe-basierten Aspekte Neu A1-, A2- und B1-Stufen abgeschlossen wurden. Grundlegende Kommunikations- und Grammatikkenntnisse wurden im Lesen, Schreiben, Hören und Sprechen entwickelt.",
+
   edu3_degree: "IELTS",
   edu3_desc: "ID: 20TR001652KHAA002A",
+
   edu4_degree: "Associate-Abschluss in Programmierung",
-  edu4_desc: "Absolvierte 3 Semester Computerprogrammierung an der Akdeniz Universität (Antalya) und erwarb 90 Leistungspunkte. Studierte Front-End- und Back-End-Webentwicklung.",
+  edu4_desc:
+    "Drei Semester Computerprogrammierung an der Akdeniz Universität (Antalya) wurden abgeschlossen, wodurch 90 Leistungspunkte erworben wurden. Sowohl Front-End- als auch Back-End-Webentwicklung wurden studiert.",
+
   edu5_degree: "Einführung in Informatik und Programmierung",
   edu6_degree: "Webdesign",
   edu7_degree: "Google IT Support Professional Zertifikat",
   edu8_degree: "Responsives Webdesign",
+
   cert_active: "Aktiver Nachweis",
+
   // Skills Section
   skills_label: "Technische Expertise",
   skills_title: "Fähigkeiten",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Infrastruktur",
+
   // Hobbies Section
   hobbies_label: "Jenseits des Terminals",
   hobbies_title: "Hobbys & Interessen",
-  hobby1_name: "Fotografie",
-  hobby1_desc: "Street- und Landschaftsfotografie in 30+ Ländern.",
-  hobby2_name: "Musikproduktion",
-  hobby2_desc: "Elektronische Ambient-Musik. Zwei EPs auf Bandcamp.",
-  hobby3_name: "Klettern",
-  hobby3_desc: "Bouldern und Sportklettern. V8-Niveau indoor.",
-  hobby4_name: "Lesen",
-  hobby4_desc: "Science-Fiction, Philosophie des Geistes und Systemdenken.",
-  hobby5_name: "Open Source",
-  hobby5_desc: "Regelmäßiger Beiträger. OSS ist eine Liebessprache.",
-  hobby6_name: "Reisen",
-  hobby6_desc: "Langsames Reisen, lokales Essen, unentdeckte Abenteuer.",
+
+  hobby1_name: "Reisen",
+  hobby1_desc:
+    "Neue Kulturen, Küchen und Landschaften wurden durch Reisen in fünf Länder auf drei Kontinenten entdeckt.",
+
+  hobby2_name: "Drohnen",
+  hobby2_desc:
+    "Luftfotografie und Videografie wurden mit Fokus auf einzigartige Perspektiven und Landschaftsaufnahmen aus der Vogelperspektive praktiziert.",
+
+  hobby3_name: "Volleyball",
+  hobby3_desc:
+    "Volleyball wurde aktiv durch die Teilnahme an lokalen Ligen und Turnieren gespielt.",
+
+  hobby4_name: "Psychologie",
+  hobby4_desc:
+    "Psychologie wurde studiert, wobei besonderes Interesse an menschlichem Verhalten, Kognition und philosophischen Fragen zu Existenz und Wissen entwickelt wurde.",
+
+  hobby5_name: "Sprachen lernen",
+  hobby5_desc:
+    "Ein starkes Interesse am Erlernen neuer Sprachen und an der Erforschung verschiedener Kulturen durch Sprache wurde aufrechterhalten. Kenntnisse in Englisch, Persisch, Türkisch und Portugiesisch wurden entwickelt, während weiterhin Interesse an Arabisch, Deutsch und Spanisch besteht.",
+
+  hobby6_name: "Persische Geschichte",
+  hobby6_desc:
+    "Ein tiefes Interesse an dem antiken Persien und seinem spirituellen Erbe wurde bewahrt, insbesondere am Zoroastrismus, der als eine der ältesten monotheistischen Religionen der Welt gilt und die persische Kultur sowie Philosophie maßgeblich beeinflusst hat.",
+
   // Social Section
-  social_label: "Online Finden",
+  social_label: "Online finden",
   social_title: "Soziale Medien",
+
   // Contact Section
-  contact_label: "Sprechen wir",
-  contact_title: "Kontakt",
-  contact_intro: "Ob ein Projekt in der Planung, Zusammenarbeit im Open Source oder einfach Hallo sagen — mein Postfach ist immer offen.",
+  contact_label: "Kontakt aufnehmen",
+  contact_title: "In Kontakt treten",
+  contact_intro:
+    "Möglichkeiten zur Zusammenarbeit, Beiträge zu Open-Source-Projekten oder fachliche Gespräche werden über offene Kommunikationskanäle jederzeit begrüßt.",
+
   contact_name: "Name",
   contact_email: "E-Mail",
   contact_message: "Nachricht",
   contact_send: "Nachricht senden",
+
   // CV Section
   cv_label: "Export",
-  cv_title: "Lebenslauf erstellen & Drucken",
+  cv_title: "Lebenslauf erstellen & drucken",
   cv_intro:
-    "Wählen Sie die Abschnitte für Ihren Lebenslauf aus und drucken oder speichern Sie als PDF.",
+    "Bevor der Lebenslauf gedruckt oder als PDF exportiert wird, können bevorzugte Abschnitte zur Aufnahme ausgewählt werden.",
+
   cv_print: "🖨 Drucken / Als PDF speichern",
   cv_preview: "👁 Vorschau",
+
   cv_note:
-    "Tipp: Wählen Sie im Druckdialog 'Als PDF speichern' für eine herunterladbare PDF-Datei.",
+    'Sobald das Druckfenster geöffnet wird, kann „Als PDF speichern“ als Ziel ausgewählt werden, um eine herunterladbare PDF-Datei zu erstellen.',
+
   // Footer Section
-  footer_copy: "Mit Sorgfalt erstellt · Open Source auf GitHub",
+  footer_copy: "© 2026 Nima. Alle Rechte vorbehalten.",
 };
