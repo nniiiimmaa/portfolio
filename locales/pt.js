@@ -1,5 +1,6 @@
 export default {
   dir: "ltr",
+  // Navigation Section
   nav_about: "Sobre",
   nav_exp: "Experiência",
   nav_projects: "Projetos",
@@ -7,52 +8,59 @@ export default {
   nav_skills: "Habilidades",
   nav_hobbies: "Hobbies",
   nav_contact: "Contato",
+  // Hero Section
   hero_eyebrow: "Disponível para projetos",
   hero_role: "Desenvolvedor Front-End",
-  hero_bio:
-    "Crio experiências digitais na interseção entre design e engenharia. Apaixonado por arquitetura limpa, ferramentas para desenvolvedores e a web aberta.",
+  hero_bio: "Crio experiências digitais na interseção entre design e engenharia. Apaixonado por arquitetura limpa, ferramentas para desenvolvedores e a web aberta.",
   hero_cta1: "Entre em contato",
   hero_cta2: "Baixar currículo",
   hero_avail: "Aberto a oportunidades",
+  // Stats Section
   stat_years: "Anos de experiência",
   stat_projects: "Projetos entregues",
   stat_stars: "Estrelas no GitHub",
   stat_certs: "Certificações",
+  // Experience Section
   exp_label: "Histórico Profissional",
   exp_title: "Experiência",
   exp1_role: "Estagiário de Desenvolvimento Web",
-  exp1_desc:
-    "Estagiário de desenvolvimento web em uma empresa imobiliária, adquirindo experiência prática em desenvolvimento web, manutenção de sites e design responsivo.",
-
+  exp1_desc: "Estagiário de desenvolvimento web em uma empresa imobiliária, adquirindo experiência prática em desenvolvimento web, manutenção de sites e design responsivo.",
   exp2_role: "Estagiário de Desenvolvimento Front-End",
-  exp2_desc:
-    "Participou de processos de desenvolvimento em equipe, incluindo colaboração de código, depuração e implementação de funcionalidades seguindo fluxos de trabalho estruturados e práticas ágeis. Adquiriu experiência prática em arquitetura baseada em componentes, controle de versão e manutenção de consistência em aplicações de grande escala.",
-
+  exp2_desc: "Participou de processos de desenvolvimento em equipe, incluindo colaboração de código, depuração e implementação de funcionalidades seguindo fluxos de trabalho estruturados e práticas ágeis. Adquiriu experiência prática em arquitetura baseada em componentes, controle de versão e manutenção de consistência em aplicações de grande escala.",
   exp3_role: "Assistente de Desenvolvedor Frontend",
-  exp3_desc:
-    "Desenvolvedor Front-End em tempo integral em um ambiente colaborativo com cerca de 25 desenvolvedores, contribuindo para sistemas multilíngues em português, inglês e espanhol. Focado em melhorar escalabilidade, qualidade de código e boas práticas no desenvolvimento de aplicações utilizadas em toda a América do Sul.",
+  exp3_desc: "Desenvolvedor Front-End em tempo integral em um ambiente colaborativo com cerca de 25 desenvolvedores, contribuindo para sistemas multilíngues em português, inglês e espanhol. Focado em melhorar escalabilidade, qualidade de código e boas práticas no desenvolvimento de aplicações utilizadas em toda a América do Sul.",
+  // Projects Section
   proj_label: "Trabalhos Selecionados",
   proj_title: "Projetos",
-  proj1_desc:
-    "Ferramenta de workflow para desenvolvedores escrita em Rust. Gerencia configs, secrets e pipelines de deployment em múltiplos provedores.",
-  proj2_desc:
-    "Grafo de conhecimento colaborativo em tempo real com WebSockets. Integra LLMs para sugerir conexões. Usado por 8k+ equipes.",
-  proj3_desc:
-    "Gerenciador de secrets open-source com arquitetura zero-knowledge. Alternativa auto-hospedada ao HashiCorp Vault.",
-  proj4_desc:
-    "Plataforma de analytics leve e focada em privacidade. Sem cookies, compatível com GDPR. Script de apenas 2KB.",
+  proj1_desc: "Desenvolveu o frontend do Sprinter, uma plataforma de distribuição de tarefas baseada em Kanban criada com Vue.js e Laravel. Foco no fluxo de gerenciamento de tarefas, usabilidade e experiência de usuário fluida.",
+  proj2_desc: "Desenvolveu uma landing page moderna e responsiva para seções, otimizando a experiência do usuário em diferentes dispositivos e focando em comunicação visual clara.",
+  proj3_desc: "Desenvolveu um portal corporativo full-stack integrando múltiplos sistemas internos, incluindo gerenciamento de histórico de funcionários, regulamentos da empresa, armazenamento de documentos e arquivos históricos.",
+  proj4_desc: "Desenvolveu o frontend de uma plataforma de localização de dentistas para a Dental Uni, ajudando usuários a encontrar dentistas parceiros através de uma interface responsiva e intuitiva.",
+  proj5_desc: "Criou um clone front-end de uma página de pedidos da Amazon. Reproduziu layout e estilos, criou componentes responsivos e implementou interatividade básica com manipulação de DOM e eventos.",
+  proj6_desc: "Desenvolveu uma plataforma interativa para um jogo psicoeducacional destinado a crianças de 9 a 13 anos, explicando mecânicas de jogo, regras e dinâmica de pontuação através de uma interface amigável.",
+  // Education Section
   edu_label: "Formação Acadêmica",
-  edu_title: "Formação",
-  edu1_degree: "Bacharelado em Ciência da Computação",
-  edu1_desc:
-    "Especialização em sistemas distribuídos e linguagens de programação. Lista de Honra do Reitor em todos os quatro anos.",
-  edu1_award: "Lista de Honra",
-  cert_active: "Credencial ativa",
+  edu_title: "Educação",
+  edu1_degree: "Certificado TÖMER (Língua Turca)",
+  edu1_desc: "Concluiu 1 ano de estudos na Universidade Karamanoglu Mehmetbey, obtendo o Certificado de Língua Turca TÖMER. Desenvolveu proficiência em leitura, escrita, escuta e fala, com foco em comunicação acadêmica e cotidiana.",
+  edu2_degree: "Certificado de Preparação Goethe",
+  edu2_desc: "Estudou alemão por 9 meses na Universidade Akdeniz (Prédio de Literatura), concluindo os níveis Aspekte Neu A1, A2 e B1 baseados no Goethe. Desenvolveu habilidades fundamentais em leitura, escrita, escuta e fala, com foco em gramática estruturada e comunicação prática.",
+  edu3_degree: "IELTS",
+  edu3_desc: "ID: 20TR001652KHAA002A",
+  edu4_degree: "Tecnólogo em Programação",
+  edu4_desc: "Concluiu 3 semestres de Programação de Computadores na Universidade Akdeniz (Antalya), obtendo 90 créditos acadêmicos. Estudou desenvolvimento web front-end e back-end.",
+  edu5_degree: "Introdução à Ciência da Computação e Programação",
+  edu6_degree: "Web Design",
+  edu7_degree: "Certificado Profissional de Suporte de TI do Google",
+  edu8_degree: "Design Responsivo para Web",
+  cert_active: "Certificação ativa",
+  // Skills Section
   skills_label: "Expertise Técnica",
   skills_title: "Habilidades",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Infraestrutura",
+  // Hobbies Section
   hobbies_label: "Além do Terminal",
   hobbies_title: "Hobbies & Interesses",
   hobby1_name: "Fotografia",
@@ -67,16 +75,18 @@ export default {
   hobby5_desc: "Contribuidor frequente. OSS é uma linguagem do amor.",
   hobby6_name: "Viagem",
   hobby6_desc: "Viagem lenta, comida local, aventuras off-the-beaten-path.",
+  // Social Section
   social_label: "Me Encontre Online",
   social_title: "Redes Sociais",
+  // Contact Section
   contact_label: "Vamos Conversar",
   contact_title: "Entre em Contato",
-  contact_intro:
-    "Seja um projeto em mente, colaboração open source ou apenas um oi — minha caixa de entrada está sempre aberta.",
+  contact_intro: "Seja um projeto em mente, colaboração open source ou apenas um oi — minha caixa de entrada está sempre aberta.",
   contact_name: "Nome",
   contact_email: "E-mail",
   contact_message: "Mensagem",
   contact_send: "Enviar mensagem",
+  // CV Section
   cv_label: "Exportar",
   cv_title: "Gerar Currículo & Imprimir",
   cv_intro:
@@ -85,5 +95,6 @@ export default {
   cv_preview: "👁 Visualizar",
   cv_note:
     "Dica: Na janela de impressão, selecione 'Salvar como PDF' para baixar o arquivo.",
+  // Footer Section
   footer_copy: "Feito com cuidado · Código aberto no GitHub",
 };

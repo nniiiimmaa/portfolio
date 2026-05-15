@@ -1,5 +1,6 @@
 export default {
   dir: "ltr",
+  // Navigation Section
   nav_about: "Hakkımda",
   nav_exp: "Deneyim",
   nav_projects: "Projeler",
@@ -7,52 +8,59 @@ export default {
   nav_skills: "Yetenekler",
   nav_hobbies: "Hobiler",
   nav_contact: "İletişim",
+  // Hero Section
   hero_eyebrow: "İş fırsatlarına açık",
   hero_role: "Front-End Geliştirici",
-  hero_bio:
-    "Tasarım ve mühendisliğin kesişiminde düşünceli dijital deneyimler oluşturuyorum. Temiz mimari, geliştirici araçları ve açık web konusunda tutkulum.",
+  hero_bio: "Tasarım ve mühendisliğin kesişiminde düşünceli dijital deneyimler oluşturuyorum. Temiz mimari, geliştirici araçları ve açık web konusunda tutkulum.",
   hero_cta1: "İletişime geç",
   hero_cta2: "CV İndir",
   hero_avail: "Fırsatlara açık",
+  // Stats Section
   stat_years: "Yıl deneyim",
   stat_projects: "Teslim edilen proje",
   stat_stars: "GitHub yıldızı",
   stat_certs: "Sertifika",
+  // Experience Section
   exp_label: "İş Geçmişi",
   exp_title: "Deneyim",
   exp1_role: "Web Geliştirici Stajyeri",
-  exp1_desc:
-    "Bir emlak şirketinde web geliştirici stajyeri olarak çalışarak web geliştirme, web sitesi bakımı ve responsive tasarım konularında pratik deneyim kazandı.",
-
+  exp1_desc: "Bir emlak şirketinde web geliştirici stajyeri olarak çalışarak web geliştirme, web sitesi bakımı ve responsive tasarım konularında pratik deneyim kazandı.",
   exp2_role: "Front-End Geliştirici Stajyeri",
-  exp2_desc:
-    "Kod iş birliği, hata ayıklama ve özellik geliştirme dahil olmak üzere ekip tabanlı geliştirme süreçlerine, yapılandırılmış iş akışları ve çevik yöntemler doğrultusunda katıldı. Bileşen tabanlı mimari, versiyon kontrolü ve büyük ölçekli uygulamalarda tutarlılığın korunması konularında pratik deneyim kazandı.",
-
+  exp2_desc: "Kod iş birliği, hata ayıklama ve özellik geliştirme dahil olmak üzere ekip tabanlı geliştirme süreçlerine, yapılandırılmış iş akışları ve çevik yöntemler doğrultusunda katıldı. Bileşen tabanlı mimari, versiyon kontrolü ve büyük ölçekli uygulamalarda tutarlılığın korunması konularında pratik deneyim kazandı.",
   exp3_role: "Frontend Geliştirici Asistanı",
-  exp3_desc:
-    "Yaklaşık 25 geliştiriciden oluşan iş birliğine dayalı bir ortamda tam zamanlı Front-End Geliştirici olarak Portekizce, İngilizce ve İspanyolca çok dilli sistemlere katkıda bulundu. Güney Amerika genelinde kullanılan uygulamalarda ölçeklenebilirlik, kod kalitesi ve en iyi uygulamaları geliştirmeye odaklandı.",
+  exp3_desc: "Yaklaşık 25 geliştiriciden oluşan iş birliğine dayalı bir ortamda tam zamanlı Front-End Geliştirici olarak Portekizce, İngilizce ve İspanyolca çok dilli sistemlere katkıda bulundu. Güney Amerika genelinde kullanılan uygulamalarda ölçeklenebilirlik, kod kalitesi ve en iyi uygulamaları geliştirmeye odaklandı.",
+  // Projects Section
   proj_label: "Seçili Çalışmalar",
   proj_title: "Projeler",
-  proj1_desc:
-    "Rust ile yazılmış son derece hızlı bir geliştirici iş akışı aracı. Çevre konfigürasyonlarını, gizli anahtarları ve deployment pipeline'larını yönetir.",
-  proj2_desc:
-    "WebSocket ve Canvas API ile oluşturulmuş gerçek zamanlı işbirlikçi bilgi grafiği. LLM entegrasyonu ile bağlantı önerileri sunar.",
-  proj3_desc:
-    "Sıfır bilgi mimarisiyle açık kaynaklı sır yöneticisi. HashiCorp Vault'a kendi sunucunuzda barındırılabilir alternatif.",
-  proj4_desc:
-    "Hafif, gizlilik odaklı analitik platformu. Çerez yok, GDPR uyumlu. 2KB altında script.",
+  proj1_desc: "Vue.js ve Laravel ile geliştirilen Kanban tabanlı görev dağıtım platformu Sprinter’ın frontend kısmını geliştirdi. Görev yönetimi iş akışı, kullanılabilirlik ve akıcı kullanıcı deneyimine odaklandı.",
+  proj2_desc: "Bölümler için modern ve responsive bir landing page geliştirdi, farklı cihazlarda kullanıcı deneyimini optimize etti ve net görsel iletişime odaklandı.",
+  proj3_desc: "Çalışan geçmiş yönetimi, şirket yönetmelikleri, belge depolama ve tarihsel arşivler dahil olmak üzere birden fazla iç sistemi entegre eden full-stack kurumsal portal geliştirdi.",
+  proj4_desc: "Dental Uni için kullanıcıların anlaşmalı diş hekimlerini bulmasına yardımcı olan responsive ve sezgisel bir arayüze sahip diş hekimi bulma platformunun frontend kısmını geliştirdi.",
+  proj5_desc: "Amazon sipariş sayfasının bir front-end klonunu geliştirdi. Düzen ve stilleri yeniden oluşturdu, responsive bileşenler geliştirdi ve DOM manipülasyonu ile event handling kullanarak temel etkileşimler ekledi.",
+  proj6_desc: "9–13 yaş arası çocuklar için tasarlanan psikoeğitsel bir oyun için etkileşimli platform geliştirdi. Kullanıcı dostu bir arayüz üzerinden oyun mekanikleri, kurallar ve puanlama sistemini açıkladı.",
+  // Education Section
   edu_label: "Akademik Geçmiş",
   edu_title: "Eğitim",
-  edu1_degree: "Bilgisayar Bilimleri Lisans",
-  edu1_desc:
-    "Dağıtık sistemler ve programlama dilleri uzmanlığı. Dört yıl boyunca Dekanlar Onur Listesi.",
-  edu1_award: "Onur Listesi",
+  edu1_degree: "TÖMER Sertifikası (Türkçe Dil Sertifikası)",
+  edu1_desc: "Karamanoğlu Mehmetbey Üniversitesi’nde 1 yıllık eğitimi tamamlayarak TÖMER Türkçe Dil Sertifikası aldı. Akademik ve günlük iletişim becerilerine odaklanarak okuma, yazma, dinleme ve konuşma alanlarında yetkinlik geliştirdi.",
+  edu2_degree: "Goethe Hazırlık Sertifikası",
+  edu2_desc: "Akdeniz Üniversitesi’nde (Edebiyat Fakültesi) 9 ay boyunca Almanca eğitimi aldı ve Goethe tabanlı Aspekte Neu A1, A2 ve B1 seviyelerini tamamladı. Yapılandırılmış dil bilgisi ve pratik iletişime odaklanarak okuma, yazma, dinleme ve konuşma becerileri geliştirdi.",
+  edu3_degree: "IELTS",
+  edu3_desc: "ID: 20TR001652KHAA002A",
+  edu4_degree: "Programlama Ön Lisans Derecesi",
+  edu4_desc: "Akdeniz Üniversitesi’nde (Antalya) 3 dönem Bilgisayar Programcılığı eğitimi alarak 90 akademik kredi kazandı. Front-end ve back-end web geliştirme eğitimi aldı.",
+  edu5_degree: "Bilgisayar Bilimine ve Programlamaya Giriş",
+  edu6_degree: "Web Tasarımı",
+  edu7_degree: "Google BT Destek Profesyonel Sertifikası",
+  edu8_degree: "Responsive Web Tasarımı",
   cert_active: "Aktif sertifika",
+  // Skills Section
   skills_label: "Teknik Uzmanlık",
   skills_title: "Yetenekler",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Altyapı",
+  // Hobbies Section
   hobbies_label: "Terminalin Ötesinde",
   hobbies_title: "Hobiler & İlgi Alanları",
   hobby1_name: "Fotoğrafçılık",
@@ -67,8 +75,10 @@ export default {
   hobby5_desc: "Düzenli katkıda bulunan. OSS bir aşk dilidir.",
   hobby6_name: "Seyahat",
   hobby6_desc: "Yavaş seyahat, yerel yemek, daha az bilinen rotalar.",
+  // Social Section
   social_label: "Beni Online Bulun",
   social_title: "Sosyal Medya",
+  // Contact Section
   contact_label: "Konuşalım",
   contact_title: "İletişime Geçin",
   contact_intro:
@@ -77,6 +87,7 @@ export default {
   contact_email: "E-posta",
   contact_message: "Mesaj",
   contact_send: "Mesaj gönder",
+  // CV Section
   cv_label: "Dışa Aktarma",
   cv_title: "CV Oluştur & Yazdır",
   cv_intro:
@@ -85,5 +96,6 @@ export default {
   cv_preview: "👁 Önizleme",
   cv_note:
     "İpucu: Yazdırma iletişim kutusu açıldığında, indirilebilir bir PDF dosyası için 'PDF Olarak Kaydet' seçeneğini belirleyin.",
+  // Footer Section
   footer_copy: "Özenle yapıldı · GitHub'da açık kaynak",
 };

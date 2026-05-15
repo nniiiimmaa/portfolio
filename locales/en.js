@@ -1,5 +1,6 @@
 export default {
   dir: "ltr",
+  // Navigation Section
   nav_about: "About",
   nav_exp: "Experience",
   nav_projects: "Projects",
@@ -7,53 +8,59 @@ export default {
   nav_skills: "Skills",
   nav_hobbies: "Hobbies",
   nav_contact: "Contact",
+  // Hero Section
   hero_eyebrow: "Available for work",
   hero_role: "Front-End Developer",
-  hero_bio:
-    "I build thoughtful digital experiences at the intersection of design and engineering. Passionate about clean architecture, developer tools, and the open web.",
+  hero_bio: "I build thoughtful digital experiences at the intersection of design and engineering. Passionate about clean architecture, developer tools, and the open web.",
   hero_cta1: "Get in touch",
   hero_cta2: "Download CV",
   hero_avail: "Open to opportunities",
+  // Stats Section
   stat_years: "Years experience",
   stat_projects: "Projects shipped",
   stat_stars: "GitHub stars",
   stat_certs: "Certifications",
+  // Experience Section
   exp_label: "Work History",
   exp_title: "Experience",
-
   exp1_role: "Web Developer Intern",
-  exp1_desc:
-    "Web Developer Intern at a real estate company, gaining practical experience in web development, website maintenance, and responsive design.",
-
+  exp1_desc: "Web Developer Intern at a real estate company, gaining practical experience in web development, website maintenance, and responsive design.",
   exp2_role: "Front-End Developer Intern",
-  exp2_desc:
-    "Participated in team-based development processes, including code collaboration, debugging, and feature implementation, following structured workflows and agile practices. Gained practical experience in component-based architecture, version control, and maintaining consistency across large-scale applications.",
-
+  exp2_desc: "Participated in team-based development processes, including code collaboration, debugging, and feature implementation, following structured workflows and agile practices. Gained practical experience in component-based architecture, version control, and maintaining consistency across large-scale applications.",
   exp3_role: "Frontend Developer Assistant",
-  exp3_desc:
-    "Full-time Front-End Developer in a collaborative environment with around 25 developers, contributing to multilingual systems in Portuguese, English, and Spanish. Focused on improving scalability, code quality, and best practices while developing applications used across South America.",
+  exp3_desc: "Full-time Front-End Developer in a collaborative environment with around 25 developers, contributing to multilingual systems in Portuguese, English, and Spanish. Focused on improving scalability, code quality, and best practices while developing applications used across South America.",
+  // Projects Section
   proj_label: "Selected Work",
   proj_title: "Projects",
-  proj1_desc:
-    "A blazing-fast developer workflow tool written in Rust. Manages environment configs, secrets, and deployment pipelines across cloud providers. 3.2k stars.",
-  proj2_desc:
-    "Real-time collaborative knowledge graph built with WebSockets and Canvas API. Integrates with LLMs to suggest connections. Used by 8k+ teams.",
-  proj3_desc:
-    "Open-source secrets manager with zero-knowledge architecture. Self-hostable alternative to HashiCorp Vault with a beautiful web UI.",
-  proj4_desc:
-    "Lightweight, privacy-first analytics platform. No cookies, GDPR compliant. Drop-in script under 2KB. Processes 50M events/day on commodity hardware.",
+  proj1_desc: "Built the frontend for Sprinter, a Kanban-based task distribution platform developed with Vue.js and Laravel. Focused on task management workflow, usability, and smooth user experience.",
+  proj2_desc: "Developed a modern and responsive landing page for a sections, optimized the user experience across devices, and focused on clear visual communication.",
+  proj3_desc: "Built a full-stack corporate portal integrating multiple internal systems, including employee history management, company regulations, document storage, and historical archives.",
+  proj4_desc: "Built the frontend for a dentist locator platform for Dental Uni, helping users find partnered dentists through a responsive and intuitive interface.",
+  proj5_desc: "Built a front-end clone of an Amazon order page. Replicated layout and styling, created responsive components, and implemented basic interactivity with DOM manipulation and event handling.",
+  proj6_desc: "Built an interactive platform for a psychoeducational game designed for children aged 9–13, explaining gameplay mechanics, rules, and scoring dynamics through a user-friendly interface.",
+  // Education Section
   edu_label: "Academic Background",
   edu_title: "Education",
-  edu1_degree: "B.Sc. Computer Science",
-  edu1_desc:
-    "Specialized in distributed systems and programming languages. Dean's Honor List all four years.",
-  edu1_award: "Dean's List",
+  edu1_degree: "TÖMER Degree (Turkish Language Degree)",
+  edu1_desc: "Completed 1 year of study at Karamanoglu Mehmetbey University, earning a TÖMER Turkish Language Certificate. Developed proficiency in reading, writing, listening, and speaking, with a focus on academic and daily communication skills.",
+  edu2_degree: "Goethe Preparation Degree",
+  edu2_desc: "Studied German for 9 months at Akdeniz University (Literature Building), completing Goethe-based Aspekte Neu A1, A2, and B1 levels. Developed foundational skills in reading, writing, listening, and speaking, with a focus on structured grammar and practical communication.",
+  edu3_degree: "IELTS",
+  edu3_desc: "ID: 20TR001652KHAA002A",
+  edu4_degree: "Programming Associate Degree",
+  edu4_desc: "Completed 3 semesters of Computer Programming at Akdeniz University (Antalya), earning 90 academic credits. Studied front-end and back-end web development.",
+  edu5_degree: "Introduction to Computer Science and Programming",
+  edu6_degree: "Web Design",
+  edu7_degree: "Google IT Support Professional Certificate",
+  edu8_degree: "Responsive Web Design",
   cert_active: "Active credential",
+  // Skills Section
   skills_label: "Technical Expertise",
   skills_title: "Skills",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Infrastructure",
+  // Hobbies Section
   hobbies_label: "Beyond the Terminal",
   hobbies_title: "Hobbies & Interests",
   hobby1_name: "Photography",
@@ -68,8 +75,10 @@ export default {
   hobby5_desc: "Regular contributor. OSS is a love language.",
   hobby6_name: "Travel",
   hobby6_desc: "Slow travel, local food, off-the-beaten-path adventures.",
+  // Social Section
   social_label: "Find Me Online",
   social_title: "Social Media",
+  // Contact Section
   contact_label: "Let's Talk",
   contact_title: "Get In Touch",
   contact_intro:
@@ -78,6 +87,7 @@ export default {
   contact_email: "Email",
   contact_message: "Message",
   contact_send: "Send message",
+  // CV Section
   cv_label: "Export",
   cv_title: "Generate CV & Print",
   cv_intro:
@@ -86,5 +96,6 @@ export default {
   cv_preview: "👁 Preview",
   cv_note:
     'Tip: When the print dialog opens, select "Save as PDF" as the destination for a downloadable PDF file.',
+  // Footer Section
   footer_copy: "Built with care · Open source on GitHub",
 };

@@ -1,5 +1,6 @@
 export default {
   dir: "ltr",
+  // Navigation Section
   nav_about: "Sobre mí",
   nav_exp: "Experiencia",
   nav_projects: "Proyectos",
@@ -7,6 +8,7 @@ export default {
   nav_skills: "Habilidades",
   nav_hobbies: "Hobbies",
   nav_contact: "Contacto",
+  // Hero Section
   hero_eyebrow: "Disponible para proyectos",
   hero_role: "Desarrollador Front-End",
   hero_bio:
@@ -14,46 +16,52 @@ export default {
   hero_cta1: "Ponte en contacto",
   hero_cta2: "Descargar CV",
   hero_avail: "Abierto a oportunidades",
+  // Stats Section
   stat_years: "Años de experiencia",
   stat_projects: "Proyectos entregados",
   stat_stars: "Estrellas en GitHub",
   stat_certs: "Certificaciones",
+  // Experience Section
   exp_label: "Historial Laboral",
   exp_title: "Experiencia",
-
   exp1_role: "Practicante de Desarrollo Web",
-  exp1_desc:
-    "Practicante de desarrollo web en una empresa inmobiliaria, adquiriendo experiencia práctica en desarrollo web, mantenimiento de sitios y diseño responsivo.",
-
+  exp1_desc: "Practicante de desarrollo web en una empresa inmobiliaria, adquiriendo experiencia práctica en desarrollo web, mantenimiento de sitios y diseño responsivo.",
   exp2_role: "Practicante de Desarrollo Front-End",
-  exp2_desc:
-    "Participó en procesos de desarrollo en equipo, incluyendo colaboración de código, depuración e implementación de funcionalidades siguiendo flujos de trabajo estructurados y metodologías ágiles. Obtuvo experiencia práctica en arquitectura basada en componentes, control de versiones y mantenimiento de consistencia en aplicaciones de gran escala.",
-
+  exp2_desc: "Participó en procesos de desarrollo en equipo, incluyendo colaboración de código, depuración e implementación de funcionalidades siguiendo flujos de trabajo estructurados y metodologías ágiles. Obtuvo experiencia práctica en arquitectura basada en componentes, control de versiones y mantenimiento de consistencia en aplicaciones de gran escala.",
   exp3_role: "Asistente de Desarrollador Frontend",
-  exp3_desc:
-    "Desarrollador Front-End de tiempo completo en un entorno colaborativo con alrededor de 25 desarrolladores, contribuyendo a sistemas multilingües en portugués, inglés y español. Enfocado en mejorar la escalabilidad, la calidad del código y las mejores prácticas en aplicaciones utilizadas en toda Sudamérica.",
+  exp3_desc: "Desarrollador Front-End de tiempo completo en un entorno colaborativo con alrededor de 25 desarrolladores, contribuyendo a sistemas multilingües en portugués, inglés y español. Enfocado en mejorar la escalabilidad, la calidad del código y las mejores prácticas en aplicaciones utilizadas en toda Sudamérica.",
+  // Projects Section
   proj_label: "Trabajos Seleccionados",
   proj_title: "Proyectos",
-  proj1_desc:
-    "Herramienta de flujo de trabajo para desarrolladores escrita en Rust. Gestiona configuraciones, secrets y pipelines de deployment en múltiples proveedores.",
-  proj2_desc:
-    "Grafo de conocimiento colaborativo en tiempo real con WebSockets. Integra LLMs para sugerir conexiones. Usado por más de 8k equipos.",
-  proj3_desc:
-    "Gestor de secrets de código abierto con arquitectura de conocimiento cero. Alternativa autoalojada a HashiCorp Vault.",
-  proj4_desc:
-    "Plataforma de análisis ligera y enfocada en la privacidad. Sin cookies, cumple con GDPR. Script de menos de 2KB.",
+  proj1_desc: "Desarrolló el frontend de Sprinter, una plataforma de distribución de tareas basada en Kanban creada con Vue.js y Laravel. Se enfocó en el flujo de gestión de tareas, la usabilidad y una experiencia de usuario fluida.",
+  proj2_desc: "Desarrolló una landing page moderna y responsive para secciones, optimizando la experiencia de usuario en diferentes dispositivos y enfocándose en una comunicación visual clara.",
+  proj3_desc: "Desarrolló un portal corporativo full-stack integrando múltiples sistemas internos, incluyendo gestión de historial de empleados, regulaciones de la empresa, almacenamiento de documentos y archivos históricos.",
+  proj4_desc: "Desarrolló el frontend de una plataforma de búsqueda de dentistas para Dental Uni, ayudando a los usuarios a encontrar dentistas asociados mediante una interfaz intuitiva y responsive.",
+  proj5_desc: "Creó un clon front-end de una página de pedidos de Amazon. Replicó el diseño y estilos, creó componentes responsive e implementó interactividad básica mediante manipulación del DOM y manejo de eventos.",
+  proj6_desc: "Desarrolló una plataforma interactiva para un juego psicoeducativo dirigido a niños de 9 a 13 años, explicando mecánicas de juego, reglas y dinámicas de puntuación mediante una interfaz amigable.",
+  // Education Section
   edu_label: "Formación Académica",
-  edu_title: "Formación",
-  edu1_degree: "Lic. en Ciencias de la Computación",
-  edu1_desc:
-    "Especialización en sistemas distribuidos y lenguajes de programación. Lista de Honor del Decano durante los cuatro años.",
-  edu1_award: "Lista de Honor",
-  cert_active: "Credencial activa",
+  edu_title: "Educación",
+  edu1_degree: "Título TÖMER (Certificado de Idioma Turco)",
+  edu1_desc: "Completó 1 año de estudios en la Universidad Karamanoglu Mehmetbey, obteniendo un certificado TÖMER de idioma turco. Desarrolló habilidades en lectura, escritura, escucha y conversación, con enfoque en comunicación académica y cotidiana.",
+  edu2_degree: "Certificado de Preparación Goethe",
+  edu2_desc: "Estudió alemán durante 9 meses en la Universidad Akdeniz (Edificio de Literatura), completando los niveles Aspekte Neu A1, A2 y B1 basados en Goethe. Desarrolló habilidades fundamentales en lectura, escritura, escucha y conversación, con énfasis en gramática estructurada y comunicación práctica.",
+  edu3_degree: "IELTS",
+  edu3_desc: "ID: 20TR001652KHAA002A",
+  edu4_degree: "Título Asociado en Programación",
+  edu4_desc: "Completó 3 semestres de Programación Informática en la Universidad Akdeniz (Antalya), obteniendo 90 créditos académicos. Estudió desarrollo web front-end y back-end.",
+  edu5_degree: "Introducción a la Informática y Programación",
+  edu6_degree: "Diseño Web",
+  edu7_degree: "Certificado Profesional de Soporte TI de Google",
+  edu8_degree: "Diseño Web Responsivo",
+  cert_active: "Certificación activa",
+  // Skills Section
   skills_label: "Experiencia Técnica",
   skills_title: "Habilidades",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Infraestructura",
+  // Hobbies Section
   hobbies_label: "Más Allá del Terminal",
   hobbies_title: "Hobbies & Intereses",
   hobby1_name: "Fotografía",
@@ -63,30 +71,29 @@ export default {
   hobby3_name: "Escalada",
   hobby3_desc: "Boulder y escalada deportiva. Nivel V8 en sala.",
   hobby4_name: "Lectura",
-  hobby4_desc:
-    "Ciencia ficción, filosofía de la mente y pensamiento sistémico.",
+  hobby4_desc: "Ciencia ficción, filosofía de la mente y pensamiento sistémico.",
   hobby5_name: "Open Source",
   hobby5_desc: "Colaborador habitual. El OSS es un lenguaje del amor.",
   hobby6_name: "Viajes",
-  hobby6_desc:
-    "Viaje lento, comida local, aventuras fuera de los circuitos habituales.",
+  hobby6_desc: "Viaje lento, comida local, aventuras fuera de los circuitos habituales.",
+  // Social Section
   social_label: "Encuéntrame Online",
   social_title: "Redes Sociales",
+  // Contact Section
   contact_label: "Hablemos",
   contact_title: "Ponte en Contacto",
-  contact_intro:
-    "Ya sea que tengas un proyecto en mente, quieras colaborar en open source, o simplemente decir hola — mi bandeja de entrada siempre está abierta.",
+  contact_intro: "Ya sea que tengas un proyecto en mente, quieras colaborar en open source, o simplemente decir hola — mi bandeja de entrada siempre está abierta.",
   contact_name: "Nombre",
   contact_email: "Correo electrónico",
   contact_message: "Mensaje",
   contact_send: "Enviar mensaje",
+  // CV Section
   cv_label: "Exportar",
   cv_title: "Generar CV & Imprimir",
-  cv_intro:
-    "Selecciona las secciones para incluir en tu CV, luego imprime o guarda como PDF.",
+  cv_intro: "Selecciona las secciones para incluir en tu CV, luego imprime o guarda como PDF.",
   cv_print: "🖨 Imprimir / Guardar como PDF",
   cv_preview: "👁 Vista previa",
-  cv_note:
-    "Consejo: Cuando se abra el diálogo de impresión, selecciona 'Guardar como PDF' para obtener un archivo descargable.",
+  cv_note: "Consejo: Cuando se abra el diálogo de impresión, selecciona 'Guardar como PDF' para obtener un archivo descargable.",
+  // Footer Section
   footer_copy: "Hecho con cuidado · Código abierto en GitHub",
 };

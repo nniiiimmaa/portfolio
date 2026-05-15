@@ -27,6 +27,10 @@
   flex-shrink: 0;
 }
 
+.edu-icon img {
+  width: 80%
+}
+
 /* ── CERT BADGE ── */
 .cert-badge {
   display: inline-flex;
@@ -43,6 +47,204 @@
 }
 
 /* ── EDUCATION RTL ── */
+[dir="rtl"] .edu-card {
+  flex-direction: row-reverse;
+}
+
+.edu-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.7rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  overflow: hidden;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* hover lift */
+.edu-card:hover {
+  transform:
+    translateY(-8px)
+    scale(1.01);
+  border-color: rgba(124,92,255,0.3);
+  box-shadow:
+    0 14px 40px rgba(0,0,0,0.22),
+    0 0 30px rgba(124,92,255,0.1);
+}
+
+/* animated neon border */
+.edu-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 280deg,
+    rgba(124,92,255,0.9) 310deg,
+    rgba(0,212,255,0.9) 330deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  animation: eduRotateBorder 3s linear infinite;
+  z-index: 0;
+}
+
+/* show border on hover */
+.edu-card:hover::before {
+  opacity: 1;
+}
+
+/* inner layer */
+.edu-card::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--card);
+  z-index: 1;
+}
+
+/* keep content above effects */
+.edu-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* rotating border */
+@keyframes eduRotateBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.edu-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.edu-card:hover .edu-icon {
+  transform:
+    rotate(-8deg)
+    scale(1.08);
+  box-shadow:
+    0 0 18px rgba(124,92,255,0.2);
+}
+
+.edu-icon img {
+  width: 80%;
+  transition: transform 0.4s ease;
+}
+
+.edu-card:hover .edu-icon img {
+  transform: scale(1.08);
+}
+
+.edu-card .card-title,
+.edu-card .card-sub,
+.edu-card .card-date,
+.edu-card .card-desc {
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
+}
+
+/* floating text */
+.edu-card:hover .card-title {
+  transform: translateX(4px);
+  color: var(--accent2);
+}
+
+.edu-card:hover .card-sub,
+.edu-card:hover .card-date,
+.edu-card:hover .card-desc {
+  transform: translateY(-2px);
+}
+
+.cert-badge {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--accent2);
+  font-family: "DM Mono", monospace;
+  margin-top: 8px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* badge hover */
+.cert-badge:hover {
+  transform:
+    translateY(-3px)
+    scale(1.04);
+  border-color: rgba(124,92,255,0.4);
+  box-shadow:
+    0 0 18px rgba(124,92,255,0.16);
+}
+
+/* shine sweep */
+.cert-badge::before {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -120%;
+  width: 60%;
+  height: 300%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  opacity: 0;
+}
+
+/* trigger shine */
+.cert-badge:hover::before {
+  opacity: 1;
+  animation: certShine 0.9s ease;
+}
+
+@keyframes certShine {
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 180%;
+  }
+}
+
+/* RTL */
 [dir="rtl"] .edu-card {
   flex-direction: row-reverse;
 }

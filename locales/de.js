@@ -1,5 +1,6 @@
 export default {
   dir: "ltr",
+  // Navigation Section
   nav_about: "Über mich",
   nav_exp: "Erfahrung",
   nav_projects: "Projekte",
@@ -7,53 +8,59 @@ export default {
   nav_skills: "Fähigkeiten",
   nav_hobbies: "Hobbys",
   nav_contact: "Kontakt",
+  // Hero Section
   hero_eyebrow: "Verfügbar für Projekte",
   hero_role: "Front-End-Entwickler",
-  hero_bio:
-    "Ich entwickle durchdachte digitale Erlebnisse an der Schnittstelle von Design und Engineering. Leidenschaftlich für saubere Architektur, Developer-Tools und das offene Web.",
+  hero_bio: "Ich entwickle durchdachte digitale Erlebnisse an der Schnittstelle von Design und Engineering. Leidenschaftlich für saubere Architektur, Developer-Tools und das offene Web.",
   hero_cta1: "Kontakt aufnehmen",
   hero_cta2: "Lebenslauf herunterladen",
   hero_avail: "Offen für Möglichkeiten",
+  // Stats Section
   stat_years: "Jahre Erfahrung",
   stat_projects: "Projekte geliefert",
   stat_stars: "GitHub-Sterne",
   stat_certs: "Zertifizierungen",
+  // Experience Section
   exp_label: "Beruflicher Werdegang",
   exp_title: "Erfahrung",
-
   exp1_role: "Webentwickler-Praktikant",
-  exp1_desc:
-    "Praktikant als Webentwickler in einem Immobilienunternehmen mit praktischer Erfahrung in Webentwicklung, Website-Wartung und responsivem Design.",
-
+  exp1_desc: "Praktikant als Webentwickler in einem Immobilienunternehmen mit praktischer Erfahrung in Webentwicklung, Website-Wartung und responsivem Design.",
   exp2_role: "Front-End-Entwickler-Praktikant",
-  exp2_desc:
-    "Teilnahme an teamorientierten Entwicklungsprozessen, einschließlich Code-Zusammenarbeit, Debugging und Feature-Implementierung unter Verwendung strukturierter Workflows und agiler Methoden. Praktische Erfahrung mit komponentenbasierter Architektur, Versionskontrolle und der Pflege konsistenter großer Anwendungen gesammelt.",
-
+  exp2_desc: "Teilnahme an teamorientierten Entwicklungsprozessen, einschließlich Code-Zusammenarbeit, Debugging und Feature-Implementierung unter Verwendung strukturierter Workflows und agiler Methoden. Praktische Erfahrung mit komponentenbasierter Architektur, Versionskontrolle und der Pflege konsistenter großer Anwendungen gesammelt.",
   exp3_role: "Frontend-Entwickler-Assistent",
-  exp3_desc:
-    "Vollzeit-Frontend-Entwickler in einem kollaborativen Umfeld mit rund 25 Entwicklern und Mitarbeit an mehrsprachigen Systemen in Portugiesisch, Englisch und Spanisch. Fokus auf Skalierbarkeit, Codequalität und Best Practices bei der Entwicklung von Anwendungen für Nutzer in ganz Südamerika.",
+  exp3_desc: "Vollzeit-Frontend-Entwickler in einem kollaborativen Umfeld mit rund 25 Entwicklern und Mitarbeit an mehrsprachigen Systemen in Portugiesisch, Englisch und Spanisch. Fokus auf Skalierbarkeit, Codequalität und Best Practices bei der Entwicklung von Anwendungen für Nutzer in ganz Südamerika.",
+  // Projects Section
   proj_label: "Ausgewählte Arbeiten",
   proj_title: "Projekte",
-  proj1_desc:
-    "Blitzschnelles Entwickler-Workflow-Tool in Rust. Verwaltet Umgebungskonfigurationen, Secrets und Deployment-Pipelines.",
-  proj2_desc:
-    "Echtzeit-kollaborativer Wissensgraph mit WebSockets. Integriert LLMs zur Verbindungsvorschlägen.",
-  proj3_desc:
-    "Open-Source-Secret-Manager mit Zero-Knowledge-Architektur. Selbstgehostete Alternative zu HashiCorp Vault.",
-  proj4_desc:
-    "Leichtgewichtige, datenschutzorientierte Analyseplattform. Keine Cookies, DSGVO-konform. Script unter 2KB.",
+  proj1_desc: "Entwickelte das Frontend für Sprinter, eine Kanban-basierte Aufgabenverteilungsplattform mit Vue.js und Laravel. Fokus auf Aufgabenmanagement, Benutzerfreundlichkeit und reibungslose Nutzererfahrung.",
+  proj2_desc: "Entwickelte eine moderne und responsive Landingpage für verschiedene Bereiche, optimierte die Benutzererfahrung auf unterschiedlichen Geräten und legte Wert auf klare visuelle Kommunikation.",
+  proj3_desc: "Entwickelte ein Full-Stack-Unternehmensportal mit Integration mehrerer interner Systeme, darunter Mitarbeiterhistorie, Unternehmensrichtlinien, Dokumentenspeicherung und historische Archive.",
+  proj4_desc: "Entwickelte das Frontend einer Zahnarztsuchplattform für Dental Uni, damit Nutzer über eine responsive und intuitive Oberfläche Partnerzahnärzte finden können.",
+  proj5_desc: "Erstellte einen Frontend-Klon einer Amazon-Bestellseite. Reproduzierte Layout und Styling, entwickelte responsive Komponenten und implementierte grundlegende Interaktivität mit DOM-Manipulation und Event-Handling.",
+  proj6_desc: "Entwickelte eine interaktive Plattform für ein psychoedukatives Spiel für Kinder im Alter von 9 bis 13 Jahren, das Spielmechaniken, Regeln und Punktesysteme über eine benutzerfreundliche Oberfläche erklärt.",
+ // Education Section
   edu_label: "Akademischer Hintergrund",
   edu_title: "Ausbildung",
-  edu1_degree: "B.Sc. Informatik",
-  edu1_desc:
-    "Spezialisierung auf verteilte Systeme und Programmiersprachen. Dekansehrenrolle in allen vier Jahren.",
-  edu1_award: "Dekansliste",
-  cert_active: "Aktives Zertifikat",
+  edu1_degree: "TÖMER-Abschluss (Türkisch-Sprachzertifikat)",
+  edu1_desc: "Absolvierte ein einjähriges Studium an der Karamanoglu Mehmetbey Universität und erhielt ein TÖMER-Zertifikat für die türkische Sprache. Entwickelte Fähigkeiten im Lesen, Schreiben, Hören und Sprechen mit Fokus auf akademische und alltägliche Kommunikation.",
+  edu2_degree: "Goethe-Vorbereitungsabschluss",
+  edu2_desc: "Studierte 9 Monate lang Deutsch an der Akdeniz Universität (Literaturgebäude) und absolvierte die Goethe-basierten Aspekte Neu A1-, A2- und B1-Stufen. Entwickelte grundlegende Fähigkeiten im Lesen, Schreiben, Hören und Sprechen mit Schwerpunkt auf strukturierter Grammatik und praktischer Kommunikation.",
+  edu3_degree: "IELTS",
+  edu3_desc: "ID: 20TR001652KHAA002A",
+  edu4_degree: "Associate-Abschluss in Programmierung",
+  edu4_desc: "Absolvierte 3 Semester Computerprogrammierung an der Akdeniz Universität (Antalya) und erwarb 90 Leistungspunkte. Studierte Front-End- und Back-End-Webentwicklung.",
+  edu5_degree: "Einführung in Informatik und Programmierung",
+  edu6_degree: "Webdesign",
+  edu7_degree: "Google IT Support Professional Zertifikat",
+  edu8_degree: "Responsives Webdesign",
+  cert_active: "Aktiver Nachweis",
+  // Skills Section
   skills_label: "Technische Expertise",
   skills_title: "Fähigkeiten",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Infrastruktur",
+  // Hobbies Section
   hobbies_label: "Jenseits des Terminals",
   hobbies_title: "Hobbys & Interessen",
   hobby1_name: "Fotografie",
@@ -68,16 +75,18 @@ export default {
   hobby5_desc: "Regelmäßiger Beiträger. OSS ist eine Liebessprache.",
   hobby6_name: "Reisen",
   hobby6_desc: "Langsames Reisen, lokales Essen, unentdeckte Abenteuer.",
+  // Social Section
   social_label: "Online Finden",
   social_title: "Soziale Medien",
+  // Contact Section
   contact_label: "Sprechen wir",
   contact_title: "Kontakt",
-  contact_intro:
-    "Ob ein Projekt in der Planung, Zusammenarbeit im Open Source oder einfach Hallo sagen — mein Postfach ist immer offen.",
+  contact_intro: "Ob ein Projekt in der Planung, Zusammenarbeit im Open Source oder einfach Hallo sagen — mein Postfach ist immer offen.",
   contact_name: "Name",
   contact_email: "E-Mail",
   contact_message: "Nachricht",
   contact_send: "Nachricht senden",
+  // CV Section
   cv_label: "Export",
   cv_title: "Lebenslauf erstellen & Drucken",
   cv_intro:
@@ -86,5 +95,6 @@ export default {
   cv_preview: "👁 Vorschau",
   cv_note:
     "Tipp: Wählen Sie im Druckdialog 'Als PDF speichern' für eine herunterladbare PDF-Datei.",
+  // Footer Section
   footer_copy: "Mit Sorgfalt erstellt · Open Source auf GitHub",
 };
