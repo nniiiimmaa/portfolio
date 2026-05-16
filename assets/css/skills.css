@@ -40,6 +40,14 @@
   background: var(--accent2);
 }
 
+.skill-dot.yellow {
+  background: var(--accent5);
+}
+
+.skill-dot.red {
+  background: var(--accent6);
+}
+
 /* ── CATEGORY LABEL ── */
 .skills-cat-label {
   font-size: 12px;
@@ -62,6 +70,14 @@
 
 .frontend {
   color: var(--accent2);
+}
+
+.adobe {
+  color: var(--accent5);
+}
+
+.languages{
+  color: var(--accent6);
 }
 
 .skills-grid {

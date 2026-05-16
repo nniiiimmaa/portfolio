@@ -90,12 +90,21 @@ export default {
 
   cert_active: "Aktiver Nachweis",
 
+  edu_more: "Mehr",
+  edu_hide: "Ausblenden",
+
   // Skills Section
   skills_label: "Technische Expertise",
   skills_title: "Fähigkeiten",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Infrastruktur",
+  skills_languages: "Sprachen",
+  skills_english: "Englisch",
+  skills_perisna: "Persisch",
+  skills_portuguese: "Portugiesisch",
+  skills_turkish: "Türkisch",
+  skills_german: "Deutsch",
 
   // Hobbies Section
   hobbies_label: "Jenseits des Terminals",
@@ -150,7 +159,7 @@ export default {
   cv_preview: "👁 Vorschau",
 
   cv_note:
-    'Sobald das Druckfenster geöffnet wird, kann „Als PDF speichern“ als Ziel ausgewählt werden, um eine herunterladbare PDF-Datei zu erstellen.',
+    "Sobald das Druckfenster geöffnet wird, kann „Als PDF speichern“ als Ziel ausgewählt werden, um eine herunterladbare PDF-Datei zu erstellen.",
 
   // Footer Section
   footer_copy: "© 2026 Nima. Alle Rechte vorbehalten.",

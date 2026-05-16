@@ -1,358 +1,526 @@
+/* ============================================================
+   cv.js  —  A4 PDF CV generator for Nima's portfolio
+   Mirrors the structure from the original cv.js but with
+   all real data sourced from index.html.
+   ============================================================ */
+
 import { currentLang } from "./translation.js";
 import { T } from "./translation-object.js";
 
-// ── PRINT CV ──
+/* ────────────────────────────────────────────────────────────
+   NIMA'S REAL DATA
+   ──────────────────────────────────────────────────────────── */
+const NIMA = {
+  name:     "Nima",
+  role:     "Front-End Developer",
+  email:    "nima.javascript@gmail.com",
+  location: "Paraná, Brazil (remote-friendly)",
+  website:  "nniiiimmaa.github.io/portfolio",
+  github:   "github.com/nniiiimmaa",
+  linkedin: "linkedin.com/in/nniiiimmaa",
+
+  stats: {
+    years:    "4+",
+    projects: "10+",
+    stars:    "0",
+    certs:    "30+",
+  },
+
+  experience: [
+    {
+      roleKey:  "exp1_role",
+      roleFb:   "Web Developer Intern",
+      company:  "Parsis Global",
+      loc:      "Antalya, Turkey",
+      date:     "Oct 2021 — Oct 2023",
+      descKey:  "exp1_desc",
+      descFb:   "Web Developer Intern at a real estate company, gaining practical experience in web development, website maintenance, and responsive design.",
+      tags:     ["HTML5", "CSS", "JavaScript"],
+      color:    "#c4beff",
+    },
+    {
+      roleKey:  "exp2_role",
+      roleFb:   "Front-End Developer Intern",
+      company:  "C-TEC",
+      loc:      "Maringá, Brazil",
+      date:     "Dec 2023 — Apr 2026",
+      descKey:  "exp2_desc",
+      descFb:   "Participated in team-based development processes, including code collaboration, debugging, and feature implementation, following structured workflows and agile practices. Gained practical experience in component-based architecture, version control, and maintaining consistency across large-scale applications.",
+      tags:     ["JavaScript", "Vue", "Tailwind CSS", "Architecture"],
+      color:    "#b8f0d8",
+    },
+    {
+      roleKey:  "exp3_role",
+      roleFb:   "Frontend Developer Assistant",
+      company:  "C-TEC",
+      loc:      "Maringá, Brazil",
+      date:     "May 2026 — Present",
+      descKey:  "exp3_desc",
+      descFb:   "Full-time Front-End Developer in a collaborative environment with around 25 developers, contributing to multilingual systems in Portuguese, English, and Spanish. The company provides educational services across South America.",
+      tags:     ["Vue", "NPM", "SCSS", "PostCSS", "BEM"],
+      color:    "#ffd6b0",
+    },
+  ],
+
+  projects: [
+    {
+      name:    "Sprinter",
+      url:     "https://sprinter-sistemas.usb.org.br/",
+      descKey: "proj1_desc",
+      descFb:  "Built the frontend for Sprinter, a Kanban-based task distribution platform developed with Vue.js and Laravel. Focused on task management workflow, usability, and smooth user experience.",
+      tags:    ["JS", "Tailwind", "Vue", "Docker"],
+    },
+    {
+      name:    "Verboo",
+      url:     "https://7verboo.com.br/",
+      descKey: "proj2_desc",
+      descFb:  "Developed a modern and responsive landing page for a relationship-focused mobile application. Built engaging UI sections, optimized the user experience across devices, and focused on clear visual communication.",
+      tags:    ["HTML5", "CSS3", "JS", "Vue", "Docker"],
+    },
+    {
+      name:    "C-TEC",
+      url:     "https://ctec.usb.org.br/",
+      descKey: "proj3_desc",
+      descFb:  "A full-stack corporate portal integrating multiple internal systems, including employee history management, company regulations, document storage, and historical archives.",
+      tags:    ["Vue", "SQL Server", "Docker", "Laravel"],
+    },
+    {
+      name:    "Dental Hope",
+      url:     "https://dentalhope.usb.org.br/",
+      descKey: "proj4_desc",
+      descFb:  "Built the frontend for a dentist locator platform for Dental Uni, helping users find partnered dentists through a responsive and intuitive interface.",
+      tags:    ["Vue", "CSS", "Tailwind"],
+    },
+    {
+      name:    "Amazon Clone",
+      url:     "https://nniiiimmaa.github.io/Amazon-Order-Page/",
+      descKey: "proj5_desc",
+      descFb:  "Built a front-end clone of an Amazon order page. Replicated layout and styling, created responsive components, and implemented basic interactivity with DOM manipulation and event handling.",
+      tags:    ["HTML5", "CSS3", "JS"],
+    },
+    {
+      name:    "PAC",
+      url:     "https://nniiiimmaa.github.io/palavra-acao-conexo/index.html",
+      descKey: "proj6_desc",
+      descFb:  "Built an interactive platform for a psychoeducational game designed for children aged 9–13, explaining gameplay mechanics, rules, and scoring dynamics through a user-friendly interface.",
+      tags:    ["HTML5", "CSS3", "JS"],
+    },
+  ],
+
+  education: [
+    {
+      degreeKey: "edu1_degree",
+      degreeFb:  "TÖMER Degree (Turkish Language Degree)",
+      school:    "Karamanoğlu Mehmetbey University · Turkey",
+      date:      "2019 — 2020 · 89/100",
+      descKey:   "edu1_desc",
+      descFb:    "Completed 1 year of study, earning a TÖMER Turkish Language Certificate. Developed proficiency in reading, writing, listening, and speaking.",
+      color:     "#c4beff",
+    },
+    {
+      degreeKey: "edu2_degree",
+      degreeFb:  "Goethe Preparation Degree",
+      school:    "Akdeniz University · Turkey",
+      date:      "2020 — 2021",
+      descKey:   "edu2_desc",
+      descFb:    "Studied German for 9 months completing Goethe-based Aspekte Neu A1, A2, and B1 levels. Developed foundational skills in reading, writing, listening, and speaking.",
+      color:     "#b8f0d8",
+    },
+    {
+      degreeKey: "edu3_degree",
+      degreeFb:  "IELTS · Score: 6.5 (B2)",
+      school:    "Cambridge University",
+      date:      "2020",
+      descFb:    "ID: 20TR001652KHAA002A",
+      color:     "#ffd6b0",
+    },
+    {
+      degreeFb:  "Programming Associate Degree",
+      school:    "Akdeniz University · Turkey",
+      date:      "2021 — 2023 · GPA 3.64/4.00",
+      descKey:   "edu4_desc",
+      descFb:    "Completed 3 semesters of Computer Programming earning 90 academic credits. Studied front-end and back-end web development.",
+      color:     "#c4beff",
+    },
+    {
+      degreeFb:  "Microsoft Office 365",
+      school:    "Microsoft · Coursera",
+      date:      "2022",
+      color:     "#b8f0d8",
+    },
+    {
+      degreeKey: "edu5_degree",
+      degreeFb:  "Intro to CS and Programming",
+      school:    "University of London · Coursera",
+      date:      "2022",
+      color:     "#b8f0d8",
+    },
+    {
+      degreeKey: "edu6_degree",
+      degreeFb:  "Web Design Specialization",
+      school:    "University of Michigan · Coursera",
+      date:      "2022",
+      color:     "#b8f0d8",
+    },
+    {
+      degreeKey: "edu7_degree",
+      degreeFb:  "Google IT Support Professional",
+      school:    "Google · Coursera",
+      date:      "2023",
+      color:     "#ffd6b0",
+    },
+    {
+      degreeKey: "edu8_degree",
+      degreeFb:  "Responsive Web Design",
+      school:    "freeCodeCamp",
+      date:      "2026",
+      color:     "#b8f0d8",
+    },
+  ],
+
+  skills: [
+    {
+      label:    "skills_frontend",
+      labelFb:  "Frontend",
+      color:    "#b8b0ff",
+      items:    ["HTML5", "CSS / SCSS", "PostCSS", "Tailwind CSS", "JavaScript", "TypeScript", "Vue"],
+    },
+    {
+      label:    "skills_backend",
+      labelFb:  "Backend",
+      color:    "#5eeaaa",
+      items:    ["PHP", "Laravel", "SQL Server", "mySQL", "PostgreSQL", "Redis"],
+    },
+    {
+      label:    "skills_infra",
+      labelFb:  "Infrastructure",
+      color:    "#f5a97f",
+      items:    ["Docker", "AWS", "GitHub Actions"],
+    },
+    {
+      labelFb:  "Adobe",
+      color:    "#f5c97f",
+      items:    ["Premiere Pro", "Photoshop", "Animate"],
+    },
+    {
+      label:    "skills_languages",
+      labelFb:  "Languages",
+      color:    "#ff9eb5",
+      items:    ["English", "Persian", "Portuguese", "Turkish", "German"],
+    },
+  ],
+
+  hobbies: [
+    { e: "✈️",  nameKey: "hobby1_name", nameFb: "Traveling" },
+    { e: "🚁",  nameKey: "hobby2_name", nameFb: "Drone" },
+    { e: "🏐",  nameKey: "hobby3_name", nameFb: "Volleyball" },
+    { e: "🧠",  nameKey: "hobby4_name", nameFb: "Psychology" },
+    { e: "🗣️", nameKey: "hobby5_name", nameFb: "Language Learning" },
+    { e: "🏛️", nameKey: "hobby6_name", nameFb: "Persian History" },
+  ],
+
+  social: [
+    { icon: "🐙", name: "GitHub",     handle: "@nniiiimmaa",   url: "https://github.com/nniiiimmaa" },
+    { icon: "💼", name: "LinkedIn",   handle: "nniiiimmaa",    url: "https://www.linkedin.com/in/nniiiimmaa/" },
+    { icon: "🐦", name: "Twitter/X",  handle: "@nniiiimmaa",   url: "https://x.com/nniiiimmaa" },
+    { icon: "🟦", name: "Bluesky",    handle: "@nniiiimmaa",   url: "https://bsky.app/profile/nniiiimmaa.bsky.social" },
+    { icon: "📝", name: "Dev.to",     handle: "@nniiiimmaa",   url: "https://dev.to/nniiiimmaa" },
+    { icon: "📸", name: "Instagram",  handle: "@nniiiiiimmaa", url: "https://www.instagram.com/nniiiiiimmaa/" },
+    { icon: "📦", name: "NPM",        handle: "~nniiiimmaa",   url: "https://www.npmjs.com/~nniiiimmaa" },
+  ],
+};
+
+/* ────────────────────────────────────────────────────────────
+   HELPERS
+   ──────────────────────────────────────────────────────────── */
+function tr(t, key, fallback = "") {
+  return (key && t[key]) ? t[key] : fallback;
+}
+
+function tag(s) {
+  return `<span style="display:inline-block;background:#ede9ff;color:#4b3fb5;padding:1px 7px;border-radius:20px;font-size:7.5px;font-family:monospace;margin:1px 2px 1px 0;border:1px solid #d5cfff">${s}</span>`;
+}
+
+function secHead(label) {
+  return `<div style="font-size:7.5px;font-family:monospace;letter-spacing:.18em;text-transform:uppercase;color:#7c6ff5;margin-bottom:5px;padding-bottom:3px;border-bottom:1.5px solid #e8e6ff;font-weight:600">${label}</div>`;
+}
+
+function bdr(color, html) {
+  return `<div style="margin-bottom:8px;padding-left:8px;border-left:2.5px solid ${color}">${html}</div>`;
+}
+
+/* ────────────────────────────────────────────────────────────
+   getSelectedSections — reads the checkboxes in the page
+   ──────────────────────────────────────────────────────────── */
 function getSelectedSections() {
   return Array.from(
-    document.querySelectorAll("#cv-options input[type=checkbox]"),
+    document.querySelectorAll("#cv-options input[type=checkbox]")
   )
     .filter((cb) => cb.checked)
     .map((cb) => cb.getAttribute("data-section"));
 }
 
+/* ────────────────────────────────────────────────────────────
+   buildCVHTML — assembles the complete A4 HTML string
+   ──────────────────────────────────────────────────────────── */
 function buildCVHTML(selected) {
-  const t = T[currentLang];
+  const t   = T[currentLang] || T["en"];
   const dir = t.dir || "ltr";
-  const photoImg = document.getElementById("hero-photo-img");
-  const hasPhoto =
-    photoImg && photoImg.style.display !== "none" && photoImg.src;
-  const photoSrc = hasPhoto ? photoImg.src : "";
-
   const inc = (id) => selected.includes(id);
+  const d   = NIMA;
 
-  // ── experience items ──
-  const expItems = [
-    {
-      role: t.exp1_role || "Senior Full-Stack Engineer",
-      company: "Vercel",
-      loc: "San Francisco, CA",
-      date: "Jan 2022 — Present",
-      desc: t.exp1_desc,
-      tags: ["Next.js", "TypeScript", "Rust", "Kubernetes"],
-    },
-    {
-      role: t.exp2_role || "Software Engineer",
-      company: "Stripe",
-      loc: "Remote",
-      date: "Mar 2019 — Dec 2021",
-      desc: t.exp2_desc,
-      tags: ["React", "Go", "gRPC", "Redis"],
-    },
-    {
-      role: t.exp3_role || "Frontend Developer",
-      company: "Shopify",
-      loc: "Ottawa, ON",
-      date: "Jun 2017 — Feb 2019",
-      desc: t.exp3_desc,
-      tags: ["Vue.js", "Ruby on Rails", "SCSS"],
-    },
-  ];
+  /* ── photo ── */
+  const photoImg = document.getElementById("hero-photo-img");
+  const photoSrc = photoImg?.src && !photoImg.src.endsWith("#") ? photoImg.src : "";
 
-  const projItems = [
-    {
-      name: "DevFlux CLI",
-      desc: t.proj1_desc,
-      tags: ["Rust", "CLI", "DevOps"],
-    },
-    {
-      name: "Mindmap AI",
-      desc: t.proj2_desc,
-      tags: ["TypeScript", "WebGL", "OpenAI API"],
-    },
-    {
-      name: "VaultKit",
-      desc: t.proj3_desc,
-      tags: ["Go", "AES-256", "Docker"],
-    },
-    {
-      name: "Prism Analytics",
-      desc: t.proj4_desc,
-      tags: ["ClickHouse", "Svelte", "Privacy"],
-    },
-  ];
-
-  const skillGroups = [
-    {
-      label: t.skills_frontend || "Frontend",
-      items: [
-        "React / Next.js",
-        "TypeScript",
-        "Vue / Nuxt",
-        "Svelte",
-        "CSS / SCSS",
-        "WebGL",
-      ],
-    },
-    {
-      label: t.skills_backend || "Backend",
-      items: ["Node.js", "Go", "Rust", "Python", "PostgreSQL", "Redis"],
-    },
-    {
-      label: t.skills_infra || "Infrastructure",
-      items: [
-        "Docker",
-        "Kubernetes",
-        "AWS",
-        "Terraform",
-        "GitHub Actions",
-        "Prometheus",
-      ],
-    },
-  ];
-
-  const hobbyItems = [
-    {
-      e: "📸",
-      n: t.hobby1_name || "Photography",
-    },
-    {
-      e: "🎵",
-      n: t.hobby2_name || "Music Production",
-    },
-    {
-      e: "🧗",
-      n: t.hobby3_name || "Rock Climbing",
-    },
-    {
-      e: "📚",
-      n: t.hobby4_name || "Reading",
-    },
-    {
-      e: "🌱",
-      n: t.hobby5_name || "Open Source",
-    },
-    {
-      e: "✈️",
-      n: t.hobby6_name || "Travel",
-    },
-  ];
-
-  const socialItems = [
-    {
-      icon: "🐙",
-      name: "GitHub",
-      handle: "@alexrivera",
-    },
-    {
-      icon: "💼",
-      name: "LinkedIn",
-      handle: "alex-rivera-dev",
-    },
-    {
-      icon: "🐦",
-      name: "Twitter / X",
-      handle: "@alexrivera",
-    },
-    {
-      icon: "🟦",
-      name: "Bluesky",
-      handle: "@alexrivera.dev",
-    },
-    {
-      icon: "📝",
-      name: "Dev.to",
-      handle: "@alexrivera",
-    },
-    {
-      icon: "📺",
-      name: "YouTube",
-      handle: "Alex Rivera Dev",
-    },
-  ];
-
-  const tag = (s) =>
-    `<span style="display:inline-block;background:#ede9ff;color:#4b3fb5;padding:1px 7px;border-radius:20px;font-size:8px;font-family:monospace;margin:1px 2px 1px 0;border:1px solid #d5cfff;">${s}</span>`;
-
-  const secHead = (label) =>
-    `<div style="font-size:8px;font-family:monospace;letter-spacing:.15em;text-transform:uppercase;color:#7c6ff5;margin-bottom:4px;padding-bottom:3px;border-bottom:1px solid #e8e6ff;">${label}</div>`;
-
+  /* ════════════ LEFT COLUMN ════════════ */
   let leftCol = "";
+
+  /* Experience */
+  if (inc("experience")) {
+    leftCol += `<div style="margin-bottom:13px">${secHead(t.exp_title || "Experience")}`;
+    d.experience.forEach((e) => {
+      leftCol += bdr(e.color, `
+        <div style="font-size:9.5px;font-weight:700;color:#1a1830;line-height:1.3">${tr(t, e.roleKey, e.roleFb)}</div>
+        <div style="font-size:8px;color:#7c6ff5;font-family:monospace;margin-bottom:1px">${e.company} · ${e.loc}</div>
+        <div style="font-size:7.5px;color:#999;margin-bottom:3px">${e.date}</div>
+        <div style="font-size:8px;color:#555;line-height:1.5">${tr(t, e.descKey, e.descFb)}</div>
+        <div style="margin-top:3px">${e.tags.map(tag).join("")}</div>
+      `);
+    });
+    leftCol += `</div>`;
+  }
+
+  /* Projects */
+  if (inc("projects")) {
+    leftCol += `<div style="margin-bottom:13px">${secHead(t.proj_title || "Projects")}`;
+    d.projects.forEach((p) => {
+      leftCol += bdr("#b8f0d8", `
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div style="font-size:9.5px;font-weight:700;color:#1a1830">${p.name}</div>
+          <a href="${p.url}" target="_blank"
+            style="font-size:7px;color:#7c6ff5;text-decoration:none;font-family:monospace;flex-shrink:0;margin-left:4px">↗ Live</a>
+        </div>
+        <div style="font-size:8px;color:#555;line-height:1.5;margin-top:1px">${tr(t, p.descKey, p.descFb)}</div>
+        <div style="margin-top:3px">${p.tags.map(tag).join("")}</div>
+      `);
+    });
+    leftCol += `</div>`;
+  }
+
+  /* Hobbies */
+  if (inc("hobbies")) {
+    leftCol += `<div style="margin-bottom:13px">${secHead(t.hobbies_title || "Hobbies")}
+      <div style="display:flex;flex-wrap:wrap;gap:5px">
+        ${d.hobbies.map((h) =>
+          `<span style="font-size:8px;color:#444;background:#f5f4fc;padding:2px 8px;border-radius:20px;border:1px solid #e0deff">
+            ${h.e} ${tr(t, h.nameKey, h.nameFb)}
+          </span>`
+        ).join("")}
+      </div>
+    </div>`;
+  }
+
+  /* ════════════ RIGHT SIDEBAR ════════════ */
   let rightCol = "";
 
-  // ── LEFT: experience & projects ──
-  if (inc("experience")) {
-    leftCol += `<div style="margin-bottom:14px;">${secHead(t.exp_title || "Experience")}`;
-    expItems.forEach((e) => {
-      leftCol += `
-        <div style="margin-bottom:9px;padding-left:8px;border-left:2px solid #c4beff;">
-          <div style="font-size:10px;font-weight:700;color:#1a1830;">${e.role}</div>
-          <div style="font-size:8.5px;color:#7c6ff5;font-family:monospace;">${e.company} · ${e.loc}</div>
-          <div style="font-size:7.5px;color:#999;margin-bottom:2px;">${e.date}</div>
-          <div style="font-size:8px;color:#444;line-height:1.5;">${e.desc || ""}</div>
-          <div style="margin-top:3px;">${e.tags.map(tag).join("")}</div>
-        </div>`;
-    });
-    leftCol += `</div>`;
-  }
-
-  if (inc("projects")) {
-    leftCol += `<div style="margin-bottom:14px;">${secHead(t.proj_title || "Projects")}`;
-    projItems.forEach((p) => {
-      leftCol += `
-        <div style="margin-bottom:8px;padding-left:8px;border-left:2px solid #b8f0d8;">
-          <div style="font-size:10px;font-weight:700;color:#1a1830;">${p.name}</div>
-          <div style="font-size:8px;color:#444;line-height:1.5;">${p.desc || ""}</div>
-          <div style="margin-top:2px;">${p.tags.map(tag).join("")}</div>
-        </div>`;
-    });
-    leftCol += `</div>`;
-  }
-
-  if (inc("hobbies")) {
-    leftCol += `<div style="margin-bottom:14px;">${secHead(t.hobbies_title || "Hobbies")}
-      <div style="display:flex;flex-wrap:wrap;gap:5px;">
-        ${hobbyItems.map((h) => `<span style="font-size:8.5px;color:#444;">${h.e} ${h.n}</span>`).join("")}
-      </div></div>`;
-  }
-
-  // ── RIGHT: photo, contact, education, skills, social ──
+  /* Photo */
   if (photoSrc) {
-    rightCol += `<div style="text-align:center;margin-bottom:12px;">
-      <img src="${photoSrc}" style="width:90px;height:90px;border-radius:12px;object-fit:cover;object-position:center top;border:2px solid #c4beff;display:block;margin:0 auto;">
+    rightCol += `<div style="text-align:center;margin-bottom:12px">
+      <img src="${photoSrc}"
+        style="width:90px;height:90px;border-radius:12px;object-fit:cover;object-position:center top;border:2px solid #c4beff;display:block;margin:0 auto">
     </div>`;
   }
 
-  if (inc("contact")) {
-    rightCol += `<div style="margin-bottom:12px;">${secHead(t.contact_title || "Contact")}
-      <div style="font-size:8.5px;color:#444;line-height:1.9;">
-        <div>✉ <a href="mailto:alex@example.dev" style="color:#7c6ff5;text-decoration:none;">alex@example.dev</a></div>
-        <div>📍 San Francisco, CA</div>
-        <div>🌐 alexrivera.dev</div>
-        <div>💼 linkedin.com/in/alex-rivera-dev</div>
-        <div>🐙 github.com/alexrivera</div>
-      </div></div>`;
-  }
+  /* Contact — always shown */
+  rightCol += `<div style="margin-bottom:12px">${secHead(t.contact_title || "Contact")}
+    <div style="font-size:8px;color:#444;line-height:2">
+      <div>✉ <a href="mailto:${d.email}" style="color:#7c6ff5;text-decoration:none">${d.email}</a></div>
+      <div>📍 ${d.location}</div>
+      <div>🌐 <a href="https://${d.website}" style="color:#7c6ff5;text-decoration:none">${d.website}</a></div>
+      <div>💼 <a href="https://${d.linkedin}" style="color:#7c6ff5;text-decoration:none">${d.linkedin}</a></div>
+      <div>🐙 <a href="https://${d.github}" style="color:#7c6ff5;text-decoration:none">${d.github}</a></div>
+    </div>
+  </div>`;
 
+  /* Education */
   if (inc("education")) {
-    rightCol += `<div style="margin-bottom:12px;">${secHead(t.edu_title || "Education")}
-      <div style="margin-bottom:7px;padding-left:8px;border-left:2px solid #c4beff;">
-        <div style="font-size:9.5px;font-weight:700;color:#1a1830;">${t.edu1_degree || "B.Sc. Computer Science"}</div>
-        <div style="font-size:8px;color:#7c6ff5;font-family:monospace;">University of Waterloo</div>
-        <div style="font-size:7.5px;color:#999;">2013 — 2017 · GPA 3.9</div>
-        <div style="font-size:8px;color:#444;">${t.edu1_desc || ""}</div>
-      </div>
-      <div style="margin-bottom:5px;padding-left:8px;border-left:2px solid #b8f0d8;">
-        <div style="font-size:9px;font-weight:700;color:#1a1830;">AWS Solutions Architect</div>
-        <div style="font-size:7.5px;color:#999;">2021 · Active</div>
-      </div>
-      <div style="padding-left:8px;border-left:2px solid #b8f0d8;">
-        <div style="font-size:9px;font-weight:700;color:#1a1830;">Certified Kubernetes Admin</div>
-        <div style="font-size:7.5px;color:#999;">2022 · Active</div>
-      </div>
-    </div>`;
+    rightCol += `<div style="margin-bottom:12px">${secHead(t.edu_title || "Education")}`;
+    d.education.forEach((e) => {
+      rightCol += bdr(e.color, `
+        <div style="font-size:8.5px;font-weight:700;color:#1a1830;line-height:1.3">${tr(t, e.degreeKey, e.degreeFb)}</div>
+        <div style="font-size:7.5px;color:#7c6ff5;font-family:monospace">${e.school}</div>
+        <div style="font-size:7px;color:#999">${e.date}</div>
+        ${e.descKey || e.descFb
+          ? `<div style="font-size:7.5px;color:#555;line-height:1.4;margin-top:1px">${tr(t, e.descKey, e.descFb)}</div>`
+          : ""}
+      `);
+    });
+    rightCol += `</div>`;
   }
 
+  /* Skills */
   if (inc("skills")) {
-    rightCol += `<div style="margin-bottom:12px;">${secHead(t.skills_title || "Skills")}`;
-    skillGroups.forEach((g) => {
-      rightCol += `<div style="margin-bottom:6px;">
-        <div style="font-size:7.5px;color:#999;font-family:monospace;margin-bottom:3px;">${g.label}</div>
-        <div>${g.items.map(tag).join("")}</div>
+    rightCol += `<div style="margin-bottom:12px">${secHead(t.skills_title || "Skills")}`;
+    d.skills.forEach((g) => {
+      const label = tr(t, g.label, g.labelFb);
+      rightCol += `<div style="margin-bottom:5px">
+        <div style="font-size:7px;color:#999;font-family:monospace;margin-bottom:3px;letter-spacing:.05em">${label}</div>
+        <div>${g.items.map((s) =>
+          `<span style="display:inline-block;background:#ede9ff;color:#4b3fb5;padding:1px 6px;border-radius:20px;font-size:7px;font-family:monospace;margin:1px 2px 1px 0;border:1px solid #d5cfff">
+            <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:${g.color};margin-right:3px;vertical-align:middle"></span>${s}
+          </span>`
+        ).join("")}</div>
       </div>`;
     });
     rightCol += `</div>`;
   }
 
+  /* Social */
   if (inc("social")) {
-    rightCol += `<div style="margin-bottom:12px;">${secHead(t.social_title || "Social")}
-      ${socialItems.map((s) => `<div style="font-size:8px;color:#444;margin-bottom:2px;">${s.icon} <span style="color:#7c6ff5;font-family:monospace;">${s.handle}</span> <span style="color:#aaa;">— ${s.name}</span></div>`).join("")}
+    rightCol += `<div style="margin-bottom:12px">${secHead(t.social_title || "Social")}
+      ${d.social.map((s) =>
+        `<div style="font-size:8px;color:#444;margin-bottom:3px">
+          ${s.icon}
+          <a href="${s.url}" target="_blank" style="color:#7c6ff5;font-family:monospace;text-decoration:none">${s.handle}</a>
+          <span style="color:#aaa"> — ${s.name}</span>
+        </div>`
+      ).join("")}
     </div>`;
   }
 
+  /* ── photo element for header ── */
+  const headerPhoto = photoSrc
+    ? `<img src="${photoSrc}"
+        style="width:68px;height:68px;border-radius:10px;object-fit:cover;object-position:center top;border:2px solid rgba(255,255,255,.4);flex-shrink:0">`
+    : `<div style="width:68px;height:68px;border-radius:10px;border:2px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </div>`;
+
+  /* ════════════ FULL A4 HTML ════════════ */
   return `<!DOCTYPE html>
 <html lang="${currentLang}" dir="${dir}">
 <head>
 <meta charset="UTF-8">
-<title>CV — Alex Rivera</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<title>CV — ${d.name}</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   @page { size: A4 portrait; margin: 0; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html, body { width:210mm; height:297mm; overflow:hidden; background:#fff; }
-  body { font-family:'Outfit',sans-serif; font-weight:300; color:#1a1830; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 210mm; height: 297mm; overflow: hidden; background: #fff; }
+  body { font-family: 'Outfit', sans-serif; font-weight: 300; color: #1a1830; }
   @media print {
-    html, body { width:210mm; height:297mm; }
-    .no-print { display:none !important; }
+    html, body { width: 210mm; height: 297mm; }
+    .no-print { display: none !important; }
   }
+  a { text-decoration: none; }
 </style>
 </head>
 <body>
 
 <!-- PRINT BUTTON (screen only) -->
-<div class="no-print" style="position:fixed;top:12px;right:12px;z-index:999;display:flex;gap:8px;">
-  <button onclick="window.print()" style="background:#7c6ff5;color:#fff;border:none;padding:8px 18px;border-radius:20px;font-family:'Outfit',sans-serif;font-size:13px;cursor:pointer;font-weight:500;">🖨 Save as PDF</button>
-  <button onclick="window.close()" style="background:#f0eff8;color:#333;border:1px solid #ddd;padding:8px 14px;border-radius:20px;font-family:'Outfit',sans-serif;font-size:13px;cursor:pointer;">✕ Close</button>
+<div class="no-print" style="position:fixed;top:12px;right:12px;z-index:999;display:flex;gap:8px">
+  <button onclick="window.print()"
+    style="background:#7c6ff5;color:#fff;border:none;padding:9px 20px;border-radius:20px;font-family:'Outfit',sans-serif;font-size:13px;cursor:pointer;font-weight:500;box-shadow:0 2px 12px rgba(124,111,245,.4)">
+    🖨 Save as PDF
+  </button>
+  <button onclick="window.close()"
+    style="background:#f0eff8;color:#333;border:1px solid #ddd;padding:9px 16px;border-radius:20px;font-family:'Outfit',sans-serif;font-size:13px;cursor:pointer">
+    ✕ Close
+  </button>
 </div>
 
 <!-- A4 PAGE -->
-<div style="width:210mm;height:297mm;background:#fff;position:relative;overflow:hidden;">
+<div style="width:210mm;height:297mm;background:#fff;position:relative;overflow:hidden">
 
   <!-- HEADER BAND -->
-  <div style="background:linear-gradient(135deg,#3b2fc9 0%,#6d5ef5 60%,#9b8cff 100%);padding:20px 28px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
-    <div style="flex:1;">
-      <div style="font-size:8px;font-family:monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:4px;">Full-Stack Developer</div>
-      <div style="font-family:'Fraunces',serif;font-size:28px;font-weight:300;color:#fff;line-height:1;letter-spacing:-0.02em;">Alex <em style="font-style:italic;color:#c4beff;">Rivera</em></div>
-      <div style="font-size:8.5px;color:rgba(255,255,255,0.7);margin-top:6px;font-family:monospace;">
-        ✉ alex@example.dev &nbsp;·&nbsp; 📍 San Francisco, CA &nbsp;·&nbsp; 🌐 alexrivera.dev
+  <div style="background:linear-gradient(135deg,#3b2fc9 0%,#6d5ef5 60%,#9b8cff 100%);padding:20px 28px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <div style="flex:1">
+      <div style="font-size:8px;font-family:'DM Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:5px">
+        ${d.role}
+      </div>
+      <div style="font-family:'Fraunces',serif;font-size:30px;font-weight:300;color:#fff;line-height:1;letter-spacing:-.02em">
+        ${d.name}
+      </div>
+      <div style="font-size:8.5px;color:rgba(255,255,255,.75);margin-top:8px;font-family:'DM Mono',monospace;line-height:1.8">
+        ✉ ${d.email} &nbsp;·&nbsp; 📍 ${d.location}
+      </div>
+      <div style="font-size:8.5px;color:rgba(255,255,255,.75);font-family:'DM Mono',monospace">
+        🐙 ${d.github} &nbsp;·&nbsp; 💼 ${d.linkedin}
       </div>
     </div>
-    ${photoSrc ? `<img src="${photoSrc}" style="width:68px;height:68px;border-radius:10px;object-fit:cover;object-position:center top;border:2px solid rgba(255,255,255,0.35);flex-shrink:0;">` : `<div style="width:68px;height:68px;border-radius:10px;border:2px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>`}
+    ${headerPhoto}
   </div>
 
   <!-- STATS STRIP -->
-  <div style="background:#f5f4fc;border-bottom:1px solid #e8e6ff;padding:7px 28px;display:flex;gap:28px;">
-    <div style="text-align:center;"><div style="font-family:'Fraunces',serif;font-size:15px;color:#5848d9;font-weight:300;">7+</div><div style="font-size:7px;color:#888;text-transform:uppercase;letter-spacing:.1em;">${t.stat_years || "Years exp."}</div></div>
-    <div style="text-align:center;"><div style="font-family:'Fraunces',serif;font-size:15px;color:#5848d9;font-weight:300;">40+</div><div style="font-size:7px;color:#888;text-transform:uppercase;letter-spacing:.1em;">${t.stat_projects || "Projects"}</div></div>
-    <div style="text-align:center;"><div style="font-family:'Fraunces',serif;font-size:15px;color:#5848d9;font-weight:300;">12k</div><div style="font-size:7px;color:#888;text-transform:uppercase;letter-spacing:.1em;">GitHub ★</div></div>
-    <div style="text-align:center;"><div style="font-family:'Fraunces',serif;font-size:15px;color:#5848d9;font-weight:300;">3</div><div style="font-size:7px;color:#888;text-transform:uppercase;letter-spacing:.1em;">${t.stat_certs || "Certs"}</div></div>
-    <div style="flex:1;display:flex;align-items:center;justify-content:flex-end;">
-      <span style="background:#e8fdf3;color:#0d9e68;border:1px solid #b8f0d8;padding:3px 10px;border-radius:20px;font-size:7.5px;font-family:monospace;">● ${t.hero_avail || "Open to opportunities"}</span>
+  <div style="background:#f5f4fc;border-bottom:1px solid #e8e6ff;padding:7px 28px;display:flex;gap:28px">
+    <div style="text-align:center">
+      <div style="font-family:'Fraunces',serif;font-size:15px;color:#5848d9;font-weight:300">${d.stats.years}</div>
+      <div style="font-size:7px;color:#888;text-transform:uppercase;letter-spacing:.1em">${t.stat_years || "Years exp."}</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-family:'Fraunces',serif;font-size:15px;color:#5848d9;font-weight:300">${d.stats.projects}</div>
+      <div style="font-size:7px;color:#888;text-transform:uppercase;letter-spacing:.1em">${t.stat_projects || "Projects"}</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-family:'Fraunces',serif;font-size:15px;color:#5848d9;font-weight:300">${d.stats.certs}</div>
+      <div style="font-size:7px;color:#888;text-transform:uppercase;letter-spacing:.1em">${t.stat_certs || "Certs"}</div>
+    </div>
+    <div style="flex:1;display:flex;align-items:center;justify-content:flex-end">
+      <span style="background:#e8fdf3;color:#0d9e68;border:1px solid #b8f0d8;padding:3px 10px;border-radius:20px;font-size:7.5px;font-family:'DM Mono',monospace">
+        ● ${t.hero_avail || "Open to opportunities"}
+      </span>
     </div>
   </div>
 
   <!-- TWO COLUMNS -->
-  <div style="display:flex;height:calc(297mm - 120px);overflow:hidden;">
+  <div style="display:flex;height:calc(297mm - 118px);overflow:hidden">
 
     <!-- LEFT (wider) -->
-    <div style="flex:1.5;padding:16px 18px 16px 28px;overflow:hidden;border-right:1px solid #ede9ff;">
-      ${leftCol || '<div style="color:#aaa;font-size:9px;">No sections selected.</div>'}
+    <div style="flex:1.5;padding:14px 16px 14px 26px;overflow:hidden;border-right:1px solid #ede9ff">
+      ${leftCol || '<div style="color:#aaa;font-size:9px">No sections selected.</div>'}
     </div>
 
-    <!-- RIGHT (sidebar) -->
-    <div style="width:68mm;padding:16px 20px 16px 16px;overflow:hidden;background:#faf9ff;">
+    <!-- RIGHT SIDEBAR -->
+    <div style="width:70mm;padding:14px 18px 14px 14px;overflow:hidden;background:#faf9ff">
       ${rightCol}
     </div>
 
   </div>
 
-  <!-- FOOTER -->
-  <div style="position:absolute;bottom:0;left:0;right:0;height:22px;background:#3b2fc9;display:flex;align-items:center;justify-content:center;">
-    <span style="font-size:7px;color:rgba(255,255,255,0.5);font-family:monospace;letter-spacing:.1em;">alexrivera.dev · alex@example.dev · github.com/alexrivera</span>
+  <!-- FOOTER BAR -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:22px;background:#3b2fc9;display:flex;align-items:center;justify-content:center">
+    <span style="font-size:7px;color:rgba(255,255,255,.55);font-family:'DM Mono',monospace;letter-spacing:.1em">
+      ${d.website} · ${d.email} · ${d.github}
+    </span>
   </div>
 
 </div>
+
 <script>
-  // auto-trigger print after fonts load
-  document.fonts.ready.then(() => {
-    setTimeout(() => { /* user clicks the button */ }, 500);
-  });
+  document.fonts.ready.then(() => { /* fonts loaded — user clicks Save as PDF */ });
 <\/script>
 </body>
 </html>`;
 }
 
+/* ────────────────────────────────────────────────────────────
+   printCV — called by the Generate A4 CV button in index.html
+   ──────────────────────────────────────────────────────────── */
 function printCV() {
   const selected = getSelectedSections();
-  const html = buildCVHTML(selected);
-  const win = window.open("", "_blank", "width=900,height=700,scrollbars=yes");
+  const html     = buildCVHTML(selected);
+  const win      = window.open("", "_blank", "width=900,height=700,scrollbars=yes");
   win.document.open();
   win.document.write(html);
   win.document.close();
 }
 
 function previewCV() {
-  printCV(); // preview IS the A4 window
+  printCV();
 }
 
-
-window.printCV = printCV;
+window.printCV   = printCV;
+window.previewCV = previewCV;

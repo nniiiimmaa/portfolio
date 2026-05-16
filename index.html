@@ -157,7 +157,7 @@
             <div class="hero-eyebrow" data-i18n="hero_eyebrow">
               Available for work
             </div>
-            <h1 id="hero-name">
+            <h1 id="hero-name" dir="ltr">
               <span>N</span>
               <span>i</span>
               <span>m</span>
@@ -391,9 +391,10 @@
             <div class="project-body">
               <div class="project-name">C-TEC</div>
               <div class="project-desc" data-i18n="proj3_desc">
-                Open-source secrets manager with zero-knowledge architecture.
-                Self-hostable alternative to HashiCorp Vault with a beautiful
-                web UI.
+                A full-stack corporate portal integrating multiple internal
+                systems, including employee history management, company
+                regulations, document storage, and historical archives, was
+                developed.
               </div>
               <div class="tags">
                 <span class="tag">Vue</span><span class="tag">SQL Server</span
@@ -511,7 +512,10 @@
           Academic Background
         </div>
         <h2 class="section-title" data-i18n="edu_title">Education</h2>
-        <div style="display: flex; flex-direction: column; gap: 14px">
+        <div
+          id="education-list"
+          style="display: flex; flex-direction: column; gap: 14px"
+        >
           <div class="edu-card">
             <div class="edu-icon">
               <img src="./assets/svg/Kmu-logo.svg" alt="kmu logo" />
@@ -587,116 +591,136 @@
               </div>
             </div>
           </div>
-
-          <div class="edu-card">
-            <div class="edu-icon">
-              <img src="./assets/svg/microsoft-logo.svg" alt="microsoft logo" />
-            </div>
-            <div>
-              <div class="card-title">Microsoft Office 365</div>
-              <div class="card-sub">Microsoft</div>
-              <div class="card-date">2022</div>
+          <div class="more-education hidden-edu">
+            <div class="edu-card">
+              <div class="edu-icon">
+                <img
+                  src="./assets/svg/microsoft-logo.svg"
+                  alt="microsoft logo"
+                />
+              </div>
               <div>
-                <a
-                  href="https://www.coursera.org/account/accomplishments/specialization/5D4BL827GQ8P"
-                  target="_blank"
-                  class="cert-badge"
-                  >✓ <span data-i18n="cert_active">Active credential</span></a
-                >
+                <div class="card-title">Microsoft Office 365</div>
+                <div class="card-sub">Microsoft</div>
+                <div class="card-date">2022</div>
+                <div>
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/specialization/5D4BL827GQ8P"
+                    target="_blank"
+                    class="cert-badge"
+                    >✓ <span data-i18n="cert_active">Active credential</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-icon">
+                <img
+                  src="./assets/svg/london-logo.svg"
+                  alt="london university logo"
+                />
+              </div>
+              <div>
+                <div class="card-title" data-i18n="edu5_degree">
+                  Introduction to Computer Science and Programming
+                </div>
+                <div class="card-sub">London University · England</div>
+                <div class="card-date">2022</div>
+                <div>
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/specialization/certificate/5D3QLGQPZYZ4"
+                    target="_blank"
+                    class="cert-badge"
+                    >✓ <span data-i18n="cert_active">Active credential</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-icon">
+                <img
+                  src="./assets/svg/michigan-logo.svg"
+                  alt="michigan university logo"
+                />
+              </div>
+              <div>
+                <div class="card-title" data-i18n="edu6_degree">Web design</div>
+                <div class="card-sub">Michigan University · USA</div>
+                <div class="card-date">2022</div>
+                <div>
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/specialization/2757NPMR6AJ6"
+                    target="_blank"
+                    class="cert-badge"
+                    >✓ <span data-i18n="cert_active">Active credential</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-icon">
+                <img src="./assets/svg/google-logo.svg" alt="google logo" />
+              </div>
+              <div>
+                <div class="card-title" data-i18n="edu7_degree">
+                  Google it support professional certification
+                </div>
+                <div class="card-sub">Google</div>
+                <div class="card-date">2023</div>
+                <div>
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/professional-cert/LC6GYYFZ7AHK"
+                    target="_blank"
+                    class="cert-badge"
+                    >✓ <span data-i18n="cert_active">Active credential</span></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-icon">
+                <img
+                  src="./assets/svg/freecodecamp-logo.svg"
+                  alt="freecodecamp logo"
+                />
+              </div>
+              <div>
+                <div class="card-title" data-i18n="edu8_degree">
+                  Responsive Web Design
+                </div>
+                <div class="card-sub">freeCodeCamp</div>
+                <div class="card-date">2026</div>
+                <div>
+                  <a
+                    href="https://www.freecodecamp.org/certification/nniiiimmaa/responsive-web-design-v9"
+                    target="_blank"
+                    class="cert-badge"
+                    >✓ <span data-i18n="cert_active">Active credential</span></a
+                  >
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="edu-card">
-            <div class="edu-icon">
-              <img
-                src="./assets/svg/london-logo.svg"
-                alt="london university logo"
-              />
-            </div>
-            <div>
-              <div class="card-title" data-i18n="edu5_degree">
-                Introduction to Computer Science and Programming
-              </div>
-              <div class="card-sub">London University · England</div>
-              <div class="card-date">2022</div>
-              <div>
-                <a
-                  href="https://www.coursera.org/account/accomplishments/specialization/certificate/5D3QLGQPZYZ4"
-                  target="_blank"
-                  class="cert-badge"
-                  >✓ <span data-i18n="cert_active">Active credential</span></a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="edu-card">
-            <div class="edu-icon">
-              <img
-                src="./assets/svg/michigan-logo.svg"
-                alt="michigan university logo"
-              />
-            </div>
-            <div>
-              <div class="card-title" data-i18n="edu6_degree">Web design</div>
-              <div class="card-sub">Michigan University · USA</div>
-              <div class="card-date">2022</div>
-              <div>
-                <a
-                  href="https://www.coursera.org/account/accomplishments/specialization/2757NPMR6AJ6"
-                  target="_blank"
-                  class="cert-badge"
-                  >✓ <span data-i18n="cert_active">Active credential</span></a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="edu-card">
-            <div class="edu-icon">
-              <img src="./assets/svg/google-logo.svg" alt="google logo" />
-            </div>
-            <div>
-              <div class="card-title" data-i18n="edu7_degree">
-                Google it support professional certification
-              </div>
-              <div class="card-sub">Google</div>
-              <div class="card-date">2023</div>
-              <div>
-                <a
-                  href="https://www.coursera.org/account/accomplishments/professional-cert/LC6GYYFZ7AHK"
-                  target="_blank"
-                  class="cert-badge"
-                  >✓ <span data-i18n="cert_active">Active credential</span></a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="edu-card">
-            <div class="edu-icon">
-              <img
-                src="./assets/svg/freecodecamp-logo.svg"
-                alt="freecodecamp logo"
-              />
-            </div>
-            <div>
-              <div class="card-title" data-i18n="edu8_degree">
-                Responsive Web Design
-              </div>
-              <div class="card-sub">freeCodeCamp</div>
-              <div class="card-date">2026</div>
-              <div>
-                <a
-                  href="https://www.freecodecamp.org/certification/nniiiimmaa/responsive-web-design-v9"
-                  target="_blank"
-                  class="cert-badge"
-                  >✓ <span data-i18n="cert_active">Active credential</span></a
-                >
-              </div>
-            </div>
-          </div>
+        <div style="margin-top: 20px; text-align: center">
+          <button id="showEducation" class="toggle-btn" data-i18n="edu_more">
+            More
+          </button>
+        </div>
+        <div style="margin-top: 20px; text-align: center">
+          <button
+            id="hideEducation"
+            class="toggle-btn"
+            data-i18n="edu_hide"
+            style="display: none"
+          >
+            hide
+          </button>
         </div>
       </section>
 
@@ -727,16 +751,19 @@
               <span class="skill-dot purple"></span>CSS / SCSS
             </div>
             <div class="skill-pill">
+              <span class="skill-dot purple"></span>PostCSS
+            </div>
+            <div class="skill-pill">
+              <span class="skill-dot purple"></span>Tailwind CSS
+            </div>
+            <div class="skill-pill">
               <span class="skill-dot purple"></span>JavaScript
             </div>
             <div class="skill-pill">
               <span class="skill-dot purple"></span>TypeScript
             </div>
             <div class="skill-pill">
-              <span class="skill-dot purple"></span>Vue / Nuxt
-            </div>
-            <div class="skill-pill">
-              <span class="skill-dot purple"></span>Tailwind CSS
+              <span class="skill-dot purple"></span>Vue
             </div>
           </div>
         </div>
@@ -788,6 +815,68 @@
             </div>
             <div class="skill-pill">
               <span class="skill-dot orange"></span>GitHub Actions
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.4rem">
+          <div
+            class="adobe"
+            style="
+              font-size: 12px;
+              margin-bottom: 10px;
+              font-family: &quot;DM Mono&quot;, monospace;
+            ">
+            Adobe
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-pill">
+              <span class="skill-dot yellow"></span>Premiere Pro
+            </div>
+
+            <div class="skill-pill">
+              <span class="skill-dot yellow"></span>Photoshop
+            </div>
+
+            <div class="skill-pill">
+              <span class="skill-dot yellow"></span>Animate
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.4rem">
+          <div
+            class="languages"
+            style="
+              font-size: 12px;
+              margin-bottom: 10px;
+              font-family: &quot;DM Mono&quot;, monospace;
+            "
+            data-i18n="skills_languages"
+          >
+            Languages
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-pill">
+              <span class="skill-dot red"></span><span data-i18n="skills_english">English</span>
+            </div>
+
+            <div class="skill-pill">
+              <span class="skill-dot red"></span><span data-i18n="skills_perisna">Persian</span>
+            </div>
+
+            <div class="skill-pill">
+              <span class="skill-dot red"></span><span data-i18n="skills_portuguese">Poruguese</span>
+            </div>
+
+            <div class="skill-pill">
+              <span class="skill-dot red"></span><span data-i18n="skills_turkish">Turkish</span>
+            </div>
+
+            <div class="skill-pill">
+              <span class="skill-dot red"></span><span data-i18n="skills_german">German</span>
             </div>
           </div>
         </div>
@@ -1156,8 +1245,9 @@
     <script src="./js/hamburger.js"></script>
     <script src="./js/theme.js"></script>
     <script src="./js/back-to-top.js"></script>
-    <script src="./js/translation.js" type="module"></script>
     <script src="./js/flag.js"></script>
+    <script src="./js/education.js"></script>
+    <script src="./js/translation.js" type="module"></script>
     <script src="./js/cv.js" type="module"></script>
   </body>
 </html>

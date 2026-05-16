@@ -90,12 +90,21 @@ export default {
 
   cert_active: "Aktif sertifika",
 
+  edu_more: "Daha Fazla",
+  edu_hide: "Gizle",
+
   // Skills Section
   skills_label: "Teknik Uzmanlık",
   skills_title: "Yetenekler",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Altyapı",
+  skills_languages: "Diller",
+  skills_english: "İngilizce",
+  skills_perisna: "Farsça",
+  skills_portuguese: "Portekizce",
+  skills_turkish: "Türkçe",
+  skills_german: "Almanca",
 
   // Hobbies Section
   hobbies_label: "Terminalin Ötesinde",

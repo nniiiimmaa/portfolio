@@ -89,12 +89,21 @@ export default {
 
   cert_active: "Active Credential",
 
+  edu_more: "more",
+  edu_hide: "hide",
+
   // Skills Section
   skills_label: "Technical Expertise",
   skills_title: "Skills",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Infrastructure",
+  skills_languages: "Languages",
+  skills_english: "English",
+  skills_perisna: "Persian",
+  skills_portuguese: "Portuguese",
+  skills_turkish: "Turkish",
+  skills_german: "German",
 
   // Hobbies Section
   hobbies_label: "Beyond the Terminal",

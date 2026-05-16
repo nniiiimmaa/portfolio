@@ -90,12 +90,21 @@ export default {
 
   cert_active: "شهادة فعالة",
 
+  edu_more: "المزيد",
+  edu_hide: "إخفاء",
+
   // Skills Section
   skills_label: "الخبرات التقنية",
   skills_title: "المهارات",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "البنية التحتية",
+  skills_languages: "اللغات",
+  skills_english: "الإنجليزية",
+  skills_perisna: "الفارسية",
+  skills_portuguese: "البرتغالية",
+  skills_turkish: "التركية",
+  skills_german: "الألمانية",
 
   // Hobbies Section
   hobbies_label: "ما وراء البرمجة",

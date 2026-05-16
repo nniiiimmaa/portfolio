@@ -90,12 +90,21 @@ export default {
 
   cert_active: "Certificación activa",
 
+  edu_more: "Más",
+  edu_hide: "Ocultar",
+
   // Skills Section
   skills_label: "Experiencia Técnica",
   skills_title: "Habilidades",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "Infraestructura",
+  skills_languages: "Idiomas",
+  skills_english: "Inglés",
+  skills_perisna: "Persa",
+  skills_portuguese: "Portugués",
+  skills_turkish: "Turco",
+  skills_german: "Alemán",
 
   // Hobbies Section
   hobbies_label: "Más Allá del Terminal",

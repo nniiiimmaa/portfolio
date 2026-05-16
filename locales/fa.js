@@ -90,12 +90,21 @@ export default {
 
   cert_active: "گواهی فعال",
 
+  edu_more: "بیشتر",
+  edu_hide: "بستن",
+
   // Skills Section
   skills_label: "تخصص‌های فنی",
   skills_title: "مهارت‌ها",
   skills_frontend: "Frontend",
   skills_backend: "Backend",
   skills_infra: "زیرساخت",
+  skills_languages: "زبان‌ها",
+  skills_english: "انگلیسی",
+  skills_perisna: "فارسی",
+  skills_portuguese: "پرتغالی",
+  skills_turkish: "ترکی",
+  skills_german: "آلمانی",
 
   // Hobbies Section
   hobbies_label: "فراتر از ترمینال",
