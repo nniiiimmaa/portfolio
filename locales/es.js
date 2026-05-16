@@ -83,15 +83,17 @@ export default {
   edu4_desc:
     "Tres semestres de Programación Informática fueron completados en la Universidad Akdeniz (Antalya), obteniéndose 90 créditos académicos. Tanto el desarrollo web front-end como back-end fueron estudiados.",
 
-  edu5_degree: "Introducción a la Informática y Programación",
-  edu6_degree: "Diseño Web",
-  edu7_degree: "Certificado Profesional de Soporte TI de Google",
-  edu8_degree: "Diseño Web Responsivo",
-
+  // Certificates Section
+  cert_label: "Desarrollo Profesional",
+  cert_title: "Certificados",
+  cert1: "Microsoft Office 365",
+  cert2: "Introducción a la Informática y Programación",
+  cert3: "Diseño Web",
+  cert4: "Certificado Profesional de Soporte TI de Google",
+  cert5: "Diseño Web Responsivo",
   cert_active: "Certificación activa",
-
-  edu_more: "Más",
-  edu_hide: "Ocultar",
+  cert_more: "Más",
+  cert_hide: "Ocultar",
 
   // Skills Section
   skills_label: "Experiencia Técnica",

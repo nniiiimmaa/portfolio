@@ -83,15 +83,17 @@ export default {
   edu4_desc:
     "سه ترم برنامه‌نویسی کامپیوتر در دانشگاه آکدنیز (آنتالیا) تکمیل شد و ۹۰ واحد دانشگاهی اخذ گردید. همچنین توسعه وب Front-End و Back-End مورد مطالعه قرار گرفت.",
 
-  edu5_degree: "مقدمه‌ای بر علوم کامپیوتر و برنامه‌نویسی",
-  edu6_degree: "طراحی وب",
-  edu7_degree: "گواهی حرفه‌ای پشتیبانی IT گوگل",
-  edu8_degree: "طراحی وب واکنش‌گرا",
-
+  // Certificates Section
+  cert_label: "توسعه حرفه‌ای",
+  cert_title: "گواهینامه‌ها",
+  cert1: "Microsoft Office 365",
+  cert2: "مقدمه‌ای بر علوم کامپیوتر و برنامه‌نویسی",
+  cert3: "طراحی وب",
+  cert4: "گواهی حرفه‌ای پشتیبانی IT گوگل",
+  cert5: "طراحی وب واکنش‌گرا",
   cert_active: "گواهی فعال",
-
-  edu_more: "بیشتر",
-  edu_hide: "بستن",
+  cert_more: "بیشتر",
+  cert_hide: "بستن",
 
   // Skills Section
   skills_label: "تخصص‌های فنی",

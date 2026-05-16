@@ -142,40 +142,6 @@ const NIMA = {
       descFb:    "Completed 3 semesters of Computer Programming earning 90 academic credits. Studied front-end and back-end web development.",
       color:     "#c4beff",
     },
-    {
-      degreeFb:  "Microsoft Office 365",
-      school:    "Microsoft · Coursera",
-      date:      "2022",
-      color:     "#b8f0d8",
-    },
-    {
-      degreeKey: "edu5_degree",
-      degreeFb:  "Intro to CS and Programming",
-      school:    "University of London · Coursera",
-      date:      "2022",
-      color:     "#b8f0d8",
-    },
-    {
-      degreeKey: "edu6_degree",
-      degreeFb:  "Web Design Specialization",
-      school:    "University of Michigan · Coursera",
-      date:      "2022",
-      color:     "#b8f0d8",
-    },
-    {
-      degreeKey: "edu7_degree",
-      degreeFb:  "Google IT Support Professional",
-      school:    "Google · Coursera",
-      date:      "2023",
-      color:     "#ffd6b0",
-    },
-    {
-      degreeKey: "edu8_degree",
-      degreeFb:  "Responsive Web Design",
-      school:    "freeCodeCamp",
-      date:      "2026",
-      color:     "#b8f0d8",
-    },
   ],
 
   skills: [

@@ -83,15 +83,17 @@ export default {
   edu4_desc:
     "Akdeniz Üniversitesi’nde (Antalya) üç dönem Bilgisayar Programcılığı eğitimi tamamlanmış ve 90 akademik kredi elde edilmiştir. Front-end ve back-end web geliştirme alanlarında eğitim alınmıştır.",
 
-  edu5_degree: "Bilgisayar Bilimine ve Programlamaya Giriş",
-  edu6_degree: "Web Tasarımı",
-  edu7_degree: "Google BT Destek Profesyonel Sertifikası",
-  edu8_degree: "Responsive Web Design",
-
+  // Certificates Section
+  cert_label: "Mesleki Gelişim",
+  cert_title: "Sertifikalar",
+  cert1: "Microsoft Office 365",
+  cert2: "Bilgisayar Bilimine ve Programlamaya Giriş",
+  cert3: "Web Tasarımı",
+  cert4: "Google BT Destek Profesyonel Sertifikası",
+  cert5: "Responsive Web Design",
   cert_active: "Aktif sertifika",
-
-  edu_more: "Daha Fazla",
-  edu_hide: "Gizle",
+  cert_more: "Daha Fazla",
+  cert_hide: "Gizle",
 
   // Skills Section
   skills_label: "Teknik Uzmanlık",

@@ -83,15 +83,17 @@ export default {
   edu4_desc:
     "Drei Semester Computerprogrammierung an der Akdeniz Universität (Antalya) wurden abgeschlossen, wodurch 90 Leistungspunkte erworben wurden. Sowohl Front-End- als auch Back-End-Webentwicklung wurden studiert.",
 
-  edu5_degree: "Einführung in Informatik und Programmierung",
-  edu6_degree: "Webdesign",
-  edu7_degree: "Google IT Support Professional Zertifikat",
-  edu8_degree: "Responsives Webdesign",
-
+  // Certificates Section
+  cert_label: "Berufliche Weiterbildung",
+  cert_title: "Zertifikate",
+  cert1: "Microsoft Office 365",
+  cert2: "Einführung in Informatik und Programmierung",
+  cert3: "Webdesign",
+  cert4: "Google IT Support Professional Zertifikat",
+  cert5: "Responsives Webdesign",
   cert_active: "Aktiver Nachweis",
-
-  edu_more: "Mehr",
-  edu_hide: "Ausblenden",
+  cert_more: "Mehr",
+  cert_hide: "Ausblenden",
 
   // Skills Section
   skills_label: "Technische Expertise",

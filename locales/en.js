@@ -82,15 +82,17 @@ export default {
   edu4_desc:
     "Three semesters of Computer Programming were completed at Akdeniz University (Antalya), resulting in the completion of 90 academic credits. Both front-end and back-end web development were studied.",
 
-  edu5_degree: "Introduction to Computer Science and Programming",
-  edu6_degree: "Web Design",
-  edu7_degree: "Google IT Support Professional Certificate",
-  edu8_degree: "Responsive Web Design",
-
+  // Certificates Section
+  cert_label: "Professional Development",
+  cert_title: "Certificates",
+  cert1: "Microsoft Office 365",
+  cert2: "Introduction to Computer Science and Programming",
+  cert3: "Web Design",
+  cert4: "Google IT Support Professional Certificate",
+  cert5: "Responsive Web Design",
   cert_active: "Active Credential",
-
-  edu_more: "more",
-  edu_hide: "hide",
+  cert_more: "more",
+  cert_hide: "hide",
 
   // Skills Section
   skills_label: "Technical Expertise",
